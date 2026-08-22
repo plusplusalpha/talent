@@ -1,6 +1,34 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<!DOCTYPE html>
+<!-- PA prospect context -->
+<script>
+window.dataLayer = window.dataLayer || [];
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var incoming = params.get('r');
+  if (incoming) {
+    try { localStorage.setItem('pa_prospect_ref', incoming); } catch(e) {}
+  }
+  var stored = '';
+  try { stored = localStorage.getItem('pa_prospect_ref') || ''; } catch(e) {}
+  var ref = incoming || stored || 'direct';
+
+  window.PA_ANALYTICS = {
+    prospect_ref: ref,
+    talent: 'dino',
+    asset: 'client_profile_2026'
+  };
+
+  window.dataLayer.push({
+    event: 'pa_report_view',
+    prospect_ref: ref,
+    talent: 'dino',
+    asset: 'client_profile_2026'
+  });
+})();
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,6 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5LTV53CV');</script>
 <!-- End Google Tag Manager -->
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
@@ -380,6 +409,7 @@ a.sc:hover{background:#FAFAFA}
 }
 
 @media(max-width:900px){
+  .contact-row{grid-template-columns:1fr}
   .profile-top{grid-template-columns:1fr}
   .profile-photo{margin:0 24px 22px;height:300px}
   .facts-grid{grid-template-columns:1fr 1fr}
@@ -472,6 +502,45 @@ a.sc:hover{background:#FAFAFA}
 
 .avail-note{font-size:9px;color:var(--ink-4);margin:8px 2px 0}
 
+
+/* contact */
+.contact-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:24px;
+  padding:18px 22px;
+  background:var(--surface);
+  border-radius:var(--r);
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+  margin-bottom:8px
+}
+.contact-label{
+  display:block;
+  font-size:8px;
+  color:var(--ink-4);
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase
+}
+.contact-email{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  margin-top:5px;
+  letter-spacing:-.01em
+}
+.contact-action{
+  font-size:9px;
+  font-weight:600;
+  color:var(--ink-2);
+  letter-spacing:.06em;
+  white-space:nowrap;
+  padding:7px 0;
+  border-bottom:1px solid var(--ink-3)
+}
+.contact-action:hover{color:var(--blue);border-color:var(--blue)}
+
 /* sources / footer */
 .sources{margin-top:30px;padding-top:16px;border-top:1px solid var(--border)}
 .sources details{font-size:9px;color:var(--ink-4)}
@@ -508,10 +577,11 @@ a.sc:hover{background:#FAFAFA}
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LTV53CV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <div class="wrap">
 
 <header class="topbar">
@@ -578,13 +648,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="intro">
   <div class="intro-eyebrow">WHY DINO NOW</div>
   <div class="intro-headline">
-    11년간 무대로 쌓은 신뢰.<br>
-    700만 개인 팬덤, 그리고 피철인으로 넓어진 대중성.
+    글로벌 팬덤을 가진 11년차 퍼포머.<br>
+    디노는 신뢰도로, 피철인은 대중 확장성으로 이어집니다.
   </div>
   <div class="intro-copy">
-    디노는 세븐틴 퍼포먼스 팀의 멤버로 2015년 데뷔 이후 월드투어와 대형 무대를 꾸준히 이어왔습니다.
-    오랜 퍼포먼스 경력은 자기관리·체력·집중력·루틴에 자연스러운 신뢰를 만들고,
-    최근 피철인 활동은 여기에 재미와 친근함을 더하며 기존 K-pop 팬층 밖으로 접점을 넓히고 있습니다.
+    디노는 세븐틴 퍼포먼스 팀의 멤버로서 2015년 데뷔 이후 꾸준히 월드투어와 대형 무대를 소화해온 아티스트입니다.
+    이 경력은 퍼포먼스·자기관리·체력·루틴·리커버리와 같은 키워드에 높은 설득력을 부여합니다.
+    최근 ‘피철인’ 활동은 여기에 친근함, 유머, 흥, 뽕의 정서를 더하면서 보다 넓은 연령대와 대중 소비재 문법까지 연결할 수 있는 확장성을 만들어내고 있습니다.
   </div>
 </section>
 
@@ -600,18 +670,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
   </article>
   <article class="ov-card">
-    <h3>Why It Works</h3>
-    <p>디노의 강점은 한 가지 이미지에 갇히지 않는다는 점입니다. 본체의 단단한 퍼포머 이미지부터 피철인의 친근하고 유쾌한 결까지, 브랜드에 맞춰 활용 폭을 넓힐 수 있습니다.</p>
+    <h3>브랜드 활용 포인트</h3>
+    <p>디노는 한 가지 이미지에 고정된 모델이 아닙니다. 본체의 신뢰도와 피철인의 친근함을 분리해서 쓸 수 있어, 브랜드의 목적에 따라 톤을 넓게 설계할 수 있습니다.</p>
     <ul class="ov-list">
-      <li>11년차 퍼포머가 주는 자기관리와 꾸준함의 신뢰</li>
-      <li>개인 팬덤과 세븐틴 글로벌 팬덤이 함께 만드는 확산력</li>
-      <li>깨끗하고 안정적인 본체 이미지</li>
-      <li>피철인을 통한 재미·친근함·세대 확장</li>
+      <li>퍼포먼스 경력에서 오는 자기관리·체력·집중력의 설득력</li>
+      <li>깨끗하고 안정적인 인상과 글로벌 K-pop 팬덤의 확산력</li>
+      <li>피철인의 재미·친근함·흥·뽕을 통한 대중적 접근</li>
+      <li>아이돌 팬층을 넘어 보다 넓은 연령대까지 연결 가능한 구조</li>
     </ul>
   </article>
   <article class="ov-card">
     <h3>SEVENTEEN Scale</h3>
-    <p>디노 개인의 도달력 뒤에는 실제 티켓 구매와 글로벌 투어로 검증된 세븐틴의 팬덤이 있습니다.</p>
+    <p>개인 캠페인의 배경에는 실제 티켓 구매와 글로벌 투어로 검증된 그룹 팬덤이 존재합니다.</p>
     <ul class="ov-list">
       <li>Billboard Midyear Top Tours 2026 · #7 Worldwide</li>
       <li>K-pop 아티스트 중 최고 순위</li>
@@ -627,7 +697,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="sec-t">
   <span>DINO PROFILE</span>
-  <span class="stag">CORE POSITIONING</span>
+  <span class="stag">CORE TALENT</span>
 </div>
 
 <section class="profile-card">
@@ -638,11 +708,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="profile-stat"><b>11Y</b><span>Career</span></div>
       </div>
 
-      <h4>오래 무대에 선 사람에게는<br>설명이 필요 없는 신뢰가 있습니다.</h4>
+      <h4>11년간 무대로 증명된<br>퍼포먼스와 자기관리의 신뢰도.</h4>
       <p>
-        디노는 세븐틴 퍼포먼스 팀의 멤버로 11년간 투어와 대형 무대를 꾸준히 소화해왔습니다.
-        몸과 컨디션을 관리하며 결과를 만들어온 시간이 곧 자기관리·체력·집중력에 대한 설득력이 됩니다.
-        여기에 개인 Instagram 약 700만과 세븐틴의 글로벌 팬덤이 더해집니다.
+        디노는 세븐틴 퍼포먼스 팀의 멤버로, 오랜 투어와 대형 무대를 지속해온 경력 자체가
+        퍼포먼스·체력·집중력·루틴에 대한 설득력을 만듭니다. 개인 Instagram 약 700만과
+        세븐틴의 글로벌 팬덤을 함께 배경으로 갖고 있어 국내 캠페인의 해외 확산도 기대할 수 있습니다.
       </p>
 
       <div class="facts-grid">
@@ -686,7 +756,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="sec-t">
   <span>피철인</span>
-  <span class="stag">AUDIENCE EXPANSION</span>
+  <span class="stag">CURRENT MOMENTUM</span>
 </div>
 
 <section class="profile-card">
@@ -697,11 +767,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="profile-stat"><b>183K</b><span>1st Week Sales</span></div>
       </div>
 
-      <h4>아이돌 밖의 사람에게도<br>쉽게 말을 거는 캐릭터.</h4>
+      <h4>재미·친근함·흥·뽕으로<br>연령적 접근을 넓히는 캐릭터.</h4>
       <p>
-        피철인은 앨범·공연·MD·팝업·팬 이벤트까지 독립적으로 전개되고 있는 디노의 또 다른 얼굴입니다.
-        본체보다 훨씬 친근하고 유쾌하며, 흥과 ‘뽕’의 정서를 자연스럽게 꺼낼 수 있습니다.
-        덕분에 K-pop 팬뿐 아니라 더 넓은 연령대와 대중을 향한 캠페인에서도 활용도가 높습니다.
+        피철인은 단순한 부캐를 넘어 앨범·공연·MD·팝업·팬 이벤트로 확장되고 있습니다.
+        디노 본체와 달리 친근하고 유머 있는 매력, 한국적인 흥과 ‘뽕’의 정서를 전면에 쓸 수 있어
+        기존 K-pop 팬층을 넘어 보다 넓은 연령대와 대중에게 접근할 수 있다는 점이 핵심입니다.
       </p>
 
       <div class="facts-grid">
@@ -745,20 +815,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="sec-t">
   <span>COMMERCIAL HISTORY</span>
-  <span class="stag">SELECTED PARTNERSHIPS</span>
+  <span class="stag">CATEGORY RANGE</span>
 </div>
 
 <section class="history-wide">
   <article class="history-block">
     <div class="eyebrow">2026 · 라이프스타일 / 풋웨어</div>
     <h4>SKECHERS</h4>
-    <p>DK · SEUNGKWAN · DINO가 함께한 라이프스타일·풋웨어 캠페인. 스킨케어 밖에서도 디노의 밝고 활동적인 이미지를 활용한 사례.</p>
+    <p>DK · SEUNGKWAN · DINO 캠페인. Skechers Singapore가 디노를 포함한 3인을 전면에 내세운 Court & Classics / Slip-ins 제품과 콘텐츠를 운영 중.</p>
     <a class="history-link" href="https://www.skechers.com.sg/collections/court-classics" target="_blank">공식 캠페인 보기 ↗</a>
   </article>
   <article class="history-block">
     <div class="eyebrow">2024–2025 · 글로벌 더마</div>
     <h4>CETAPHIL · AZARINE</h4>
-    <p>Cetaphil Korea와 Azarine의 브랜드 앰버서더로 활동. 글로벌 스킨케어 브랜드가 디노 개인의 깨끗한 이미지와 팬덤 영향력을 이미 검증한 사례.</p>
+    <p>Cetaphil Korea 브랜드 앰버서더, Azarine 브랜드 앰버서더 이력. 글로벌 더마·스킨케어 브랜드가 디노 개인의 자기관리 이미지와 팬덤 영향력을 이미 활용한 사례.</p>
     <div class="history-links">
       <a class="history-link" href="https://www.linkedin.com/posts/galderma-_dinowithcetaphil-cetaphil-kpop-activity-7250405184554635264-8X5l" target="_blank">Cetaphil / Galderma ↗</a>
       <a class="history-link" href="https://azarinecosmetic.com/a/azarine-umumkan-dino-of-seventeen-sebagai-brand-ambassador-baru-simak" target="_blank">Azarine ↗</a>
@@ -768,7 +838,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="sec-t">
   <span>SEVENTEEN GROUP PARTNERSHIPS</span>
-  <span class="stag">GROUP COMMERCIAL SCALE</span>
+  <span class="stag">GROUP CONTEXT</span>
 </div>
 
 <section class="group-partnership-grid">
@@ -776,7 +846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="gp-year">2025 · FOOD</div>
     <h4>bibigo</h4>
     <div class="gp-role">Global Brand Ambassador</div>
-    <p>글로벌 캠페인부터 협업 제품과 팝업까지 이어진 대표적인 그룹 파트너십.</p>
+    <p>캠페인 영상, 협업 제품, 팝업과 글로벌 온·오프라인 활동으로 이어진 그룹 단위 파트너십.</p>
     <a class="gp-link" href="https://www.cj.co.kr/en/newsroom/pressreleases/news-detail/1661" target="_blank" rel="noopener">OFFICIAL ↗</a>
   </article>
 
@@ -784,7 +854,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="gp-year">2024 · BEVERAGE</div>
     <h4>Mogu Mogu</h4>
     <div class="gp-role">Global Brand Ambassador</div>
-    <p>브랜드 최초 글로벌 앰버서더로 기용돼 아시아태평양 시장을 중심으로 캠페인을 전개.</p>
+    <p>브랜드 최초 글로벌 앰버서더. 아시아태평양 지역을 중심으로 캠페인과 협업 제품을 전개.</p>
     <a class="gp-link" href="https://www.youtube.com/watch?v=ovB38RgBPFc" target="_blank" rel="noopener">CAMPAIGN ↗</a>
   </article>
 
@@ -792,43 +862,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="gp-year">2021 · E-COMMERCE</div>
     <h4>Lazada</h4>
     <div class="gp-role">Regional Happiness Ambassador</div>
-    <p>동남아 11.11 캠페인을 대표한 지역 앰버서더. 세븐틴의 동남아 팬덤 영향력을 보여준 커머스 사례.</p>
+    <p>동남아 지역 첫 Happiness Ambassador로 11.11 캠페인과 Super Show에 참여한 대표 커머스 사례.</p>
     <a class="gp-link" href="https://lazada-com.oss-ap-southeast-1.aliyuncs.com/147-press-release.pdf" target="_blank" rel="noopener">OFFICIAL ↗</a>
   </article>
 </section>
 
 <div class="sec-t">
   <span>PARTNERSHIP DIRECTION</span>
-  <span class="stag">TWO CREATIVE MODES</span>
+  <span class="stag">FLEXIBLE BY BRAND</span>
 </div>
 
 <section class="lanes">
   <article class="lane">
-    <div class="lane-tag">DINO</div>
-    <h3>신뢰와 선명한 이미지</h3>
+    <div class="lane-tag">유형 A</div>
+    <h3>DINO</h3>
     <ul>
-      <li>퍼포먼스 · 자기관리 · 꾸준함</li>
-      <li>웰니스 · 리커버리 · 그루밍</li>
-      <li>정제된 광고 영상 · 스틸 · 옥외광고</li>
-      <li>개인 및 글로벌 팬덤 확산</li>
+      <li>퍼포먼스 · 자기관리 · 루틴 · 회복</li>
+      <li>웰니스 · 그루밍 · 리커버리</li>
+      <li>광고 영상 · 스틸 · 옥외광고</li>
+      <li>글로벌 K-pop 팬덤 기반의 확산력</li>
     </ul>
   </article>
 
   <article class="lane">
-    <div class="lane-tag">DINO × PICHEOLIN</div>
-    <h3>재미와 더 넓은 대중성</h3>
+    <div class="lane-tag">유형 B</div>
+    <h3>디노 × 피철인</h3>
     <ul>
       <li>재미 · 친근함 · 흥 · 뽕</li>
-      <li>게임 · 라이프스타일 · 대중 소비재</li>
-      <li>숏폼 · 캐릭터 중심 콘텐츠</li>
-      <li>아이돌 팬층 밖까지 넓어지는 접점</li>
+      <li>게임 출시 · 라이프스타일 · 대중 소비재</li>
+      <li>숏폼 · 캐릭터 중심 크리에이티브</li>
+      <li>본체의 신뢰 + 피철인의 연령층 확장</li>
     </ul>
   </article>
 </section>
 
 <div class="sec-t">
   <span>AVAILABILITY</span>
-  <span class="stag">2026 SHOOT WINDOW</span>
+  <span class="stag">PRE-SERVICE WINDOW</span>
 </div>
 
 <section class="avail">
@@ -842,14 +912,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="avail-c">
     <span>사전 제작</span>
-    <b>입대 전 촬영으로<br>캠페인 소재 사전 확보</b>
+    <b>입대 전 영상·스틸 등<br>캠페인 소재 확보 가능</b>
   </div>
   <div class="avail-c">
-    <span>캠페인 운영</span>
-    <b>계약 기간에 따라<br>입대 후에도 집행 가능</b>
+    <span>입대 후 운영</span>
+    <b>계약된 사용 기간 내<br>입대 후에도 캠페인 전개 가능</b>
   </div>
 </section>
 <p class="avail-note">※ 사용 기간·매체·지역 및 세부 권리 범위는 브랜드별 협의.</p>
+
+
+<div class="sec-t">
+  <span>CONTACT</span>
+  <span class="stag">BRAND PARTNERSHIP INQUIRY</span>
+</div>
+
+<section class="contact-row">
+  <div>
+    <span class="contact-label">Brand Partnership Inquiry</span>
+    <span class="contact-email">admin@plusalpha.agency</span>
+  </div>
+  <a class="contact-action"
+     data-pa-cta="brand_partnership_email"
+     href="mailto:admin@plusalpha.agency?subject=DINO%20Brand%20Partnership">
+    CONTACT PA ↗
+  </a>
+</section>
 
 <section class="sources">
   <details>
@@ -884,6 +972,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </div>
 
+
+
+<script>
+(function(){
+  var ctx = window.PA_ANALYTICS || {
+    prospect_ref: 'direct',
+    talent: 'dino',
+    asset: 'client_profile_2026'
+  };
+
+  function track(name, params){
+    var payload = {
+      event: name,
+      prospect_ref: ctx.prospect_ref,
+      talent: ctx.talent,
+      asset: ctx.asset
+    };
+    if (params) {
+      Object.keys(params).forEach(function(k){ payload[k] = params[k]; });
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+
+    if (a.matches('[data-pa-cta]')) {
+      track('pa_cta_click', {
+        cta_name: a.getAttribute('data-pa-cta'),
+        link_url: a.getAttribute('href') || ''
+      });
+      return;
+    }
+
+    if (a.classList.contains('video-card')) {
+      var title = a.querySelector('.video-title');
+      var type = a.querySelector('.video-type');
+      track('pa_video_click', {
+        content_name: title ? title.textContent.trim() : 'video',
+        content_type: type ? type.textContent.trim() : 'video',
+        link_url: a.href
+      });
+      return;
+    }
+
+    if (a.classList.contains('history-link') || a.classList.contains('gp-link')) {
+      track('pa_reference_click', {
+        content_name: (a.closest('article') && a.closest('article').querySelector('h4'))
+          ? a.closest('article').querySelector('h4').textContent.trim()
+          : 'reference',
+        link_url: a.href
+      });
+      return;
+    }
+
+    var host = '';
+    try { host = new URL(a.href).hostname; } catch(err) {}
+    var platform = '';
+    if (host.indexOf('instagram.com') >= 0) platform = 'instagram';
+    else if (host.indexOf('tiktok.com') >= 0) platform = 'tiktok';
+    else if (host.indexOf('youtube.com') >= 0 || host.indexOf('youtu.be') >= 0) platform = 'youtube';
+    else if (host.indexOf('spotify.com') >= 0) platform = 'spotify';
+
+    if (platform) {
+      track('pa_social_click', {
+        platform: platform,
+        link_url: a.href
+      });
+    }
+  });
+
+  var fired50 = false;
+  var fired90 = false;
+  function scrollDepth(){
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    if (max <= 0) return 100;
+    return Math.round((window.scrollY / max) * 100);
+  }
+
+  window.addEventListener('scroll', function(){
+    var depth = scrollDepth();
+    if (!fired50 && depth >= 50) {
+      fired50 = true;
+      track('pa_scroll', { scroll_depth: '50' });
+    }
+    if (!fired90 && depth >= 90) {
+      fired90 = true;
+      track('pa_scroll', { scroll_depth: '90' });
+    }
+  }, { passive:true });
+})();
+</script>
 
 </body>
 </html>
