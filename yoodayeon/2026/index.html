@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- PA prospect context -->
+<script>
+window.dataLayer = window.dataLayer || [];
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var incoming = params.get('r');
+  if (incoming) {
+    try { localStorage.setItem('pa_prospect_ref', incoming); } catch(e) {}
+  }
+  var stored = '';
+  try { stored = localStorage.getItem('pa_prospect_ref') || ''; } catch(e) {}
+  var ref = incoming || stored || 'direct';
+
+  window.PA_ANALYTICS = {
+    prospect_ref: ref,
+    talent: 'yoodayeon',
+    asset: 'client_profile_2026'
+  };
+
+  window.dataLayer.push({
+    event: 'pa_report_view',
+    prospect_ref: ref,
+    talent: 'yoodayeon',
+    asset: 'client_profile_2026'
+  });
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5LTV53CV');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>PA Talent — YOU DAYEON 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fff;
+  --surface:#fff;
+  --ink:#0A0A0A;
+  --ink-2:#333;
+  --ink-3:#666;
+  --ink-4:#999;
+  --ink-5:#CCC;
+  --border:#E0E0E0;
+  --blue:#001489;
+  --blue-light:#F0F2F8;
+  --pad:clamp(16px,4vw,48px);
+  --r:3px
+}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{
+  font-family:"Inter","Noto Sans KR",system-ui,sans-serif;
+  color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;zoom:.8
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad) 64px}
+
+/* TOP */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 0 16px;gap:12px;flex-wrap:wrap}
+.wordmark img{display:block;width:56px;height:auto}
+.topbar-r{display:flex;gap:14px;align-items:center}
+.badge{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--ink-5);padding:3px 8px}
+.ts{font-size:10px;color:var(--ink-4)}
+.hero{padding:32px 0}
+.hero h1{font-size:clamp(28px,5vw,42px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.hero-meta{font-size:11px;color:var(--ink-4);margin-top:10px}
+
+/* SIGNALS */
+.sec-t{
+  font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-4);margin:38px 0 12px;
+  display:flex;align-items:center;justify-content:space-between
+}
+.stag{font-size:9px;font-weight:500;color:var(--ink-4);letter-spacing:.06em;text-transform:uppercase;background:var(--surface);padding:2px 7px;border-radius:2px}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:6px}
+.sc{display:block;background:var(--surface);padding:20px 22px;border-radius:var(--r);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+a.sc:hover{background:#FAFAFA}
+.sc .sl{font-size:10px;font-weight:500;color:var(--ink-4);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.sc .sv{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.sc .ss{font-size:9px;color:var(--ink-4);margin-top:7px}
+.sc.hl{background:var(--blue-light)}
+.sc.hl .sv{color:var(--blue)}
+.sdot{width:5px;height:5px;background:var(--blue);flex:none}
+
+.china-strip{
+  display:grid;grid-template-columns:190px repeat(4,1fr);border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);margin:0 0 30px
+}
+.china-label{padding:14px 18px 14px 0}
+.china-label span{display:block;font-size:9px;font-weight:600;color:var(--ink-4);letter-spacing:.1em;text-transform:uppercase}
+.china-label small{display:block;font-size:8px;color:var(--ink-5);margin-top:5px}
+.china-stat{padding:12px 16px;border-left:1px solid var(--border)}
+.china-stat b{display:block;font-size:14px}
+.china-stat span{display:block;font-size:8px;color:var(--ink-4);margin-top:3px}
+
+/* INTRO */
+.intro{width:100%;padding:4px 0 38px;border-bottom:1px solid var(--border)}
+.intro-eyebrow{font-size:9px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-4);margin-bottom:14px}
+.intro-headline{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.035em;line-height:1.38;max-width:930px}
+.intro-copy{font-size:13px;line-height:1.9;color:var(--ink-3);max-width:920px;margin-top:26px}
+
+/* OVERVIEW */
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:22px 0 42px}
+.ov-card{background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.06);border-radius:var(--r);padding:24px}
+.ov-card h3{font-size:16px;font-weight:700;letter-spacing:-.02em}
+.ov-card p{font-size:12px;line-height:1.75;color:var(--ink-3);margin-top:10px}
+.ov-list{list-style:none;margin-top:16px}
+.ov-list li{font-size:11px;color:var(--ink-2);padding:9px 0;border-bottom:1px solid var(--border)}
+.ov-list li:last-child{border-bottom:none}
+
+/* PROFILE */
+.gc{background:var(--surface);border-radius:var(--r);margin-bottom:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.gc-h{padding:22px 24px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.gc-h h3{font-size:18px;font-weight:700;letter-spacing:-.02em}
+.gc-h h3 small{display:block;font-size:11px;font-weight:400;color:var(--ink-4);margin-top:3px;letter-spacing:0}
+.gc-meta{text-align:right}
+.gc-meta b{font-size:20px;font-weight:800;letter-spacing:-.03em}
+.gc-meta span{display:block;font-size:9px;color:var(--ink-4);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+
+.feature{display:grid;grid-template-columns:1fr 280px;border-top:1px solid var(--border)}
+.feature-copy{padding:28px 30px}
+.feature-copy h4{font-size:25px;line-height:1.35;letter-spacing:-.035em}
+.feature-copy p{font-size:12px;line-height:1.85;color:var(--ink-3);margin-top:18px;max-width:720px}
+.facts-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:25px;border-top:1px solid var(--border)}
+.fact-mini{padding:12px 14px 12px 0;border-bottom:1px solid var(--border)}
+.fact-mini:not(:nth-child(3n+1)){padding-left:14px;border-left:1px solid var(--border)}
+.fact-mini span{display:block;font-size:8px;color:var(--ink-4);letter-spacing:.08em;text-transform:uppercase}
+.fact-mini b{display:block;font-size:10px;margin-top:4px}
+.feature-photo{height:255px;background:#F4F4F2;overflow:hidden;border-left:1px solid var(--border)}
+.feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+.video-row{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;padding:16px 24px 22px;border-top:1px solid var(--border)}
+.video-card{position:relative;height:160px;background:#111;overflow:hidden;border-radius:2px}
+.video-card img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.78)}
+.video-ov{position:absolute;inset:0;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 68%)}
+.play{position:absolute;top:16px;left:16px;width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:12px;padding-left:2px}
+.vk{font-size:8px;color:#ffffffaa;letter-spacing:.1em}
+.video-card h4{font-size:14px;color:#fff;margin-top:4px}
+.video-card small{font-size:8px;color:#ffffffaa;margin-top:4px}
+
+/* MARKET / CURRENT */
+.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.market-card{padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.06);border-radius:var(--r)}
+.mk{font-size:8px;color:var(--ink-4);letter-spacing:.1em}
+.market-card h3{font-size:17px;line-height:1.4;margin-top:13px}
+.market-card p{font-size:11px;line-height:1.75;color:var(--ink-3);margin-top:11px}
+.market-card ul{list-style:none;margin-top:16px}
+.market-card li{font-size:10px;color:var(--ink-2);padding:8px 0;border-bottom:1px solid var(--border)}
+
+.current{display:grid;grid-template-columns:1.05fr .95fr;gap:6px}
+.release{background:var(--blue-light);padding:26px}
+.release .rdate{font-size:9px;color:var(--blue);letter-spacing:.08em;font-weight:600}
+.release h3{font-size:29px;line-height:1.15;letter-spacing:-.04em;margin-top:10px}
+.release p{font-size:11px;line-height:1.75;color:#555;margin-top:14px}
+.timeline{padding:22px 24px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.trow{display:grid;grid-template-columns:105px 1fr;gap:15px;padding:11px 0;border-bottom:1px solid var(--border)}
+.trow span{font-size:8px;color:var(--ink-4)}
+.trow b{font-size:10px}
+
+/* COMMERCIAL */
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.proof-card{padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.06);border-radius:var(--r)}
+.proof-card .pk{font-size:8px;color:var(--ink-4);letter-spacing:.1em}
+.proof-card h3{font-size:17px;line-height:1.4;margin-top:13px}
+.proof-card p{font-size:11px;line-height:1.75;color:var(--ink-3);margin-top:10px}
+.proof-card .proof-meta{margin-top:17px;padding-top:13px;border-top:1px solid var(--border);font-size:9px;color:var(--ink-4)}
+
+.lanes{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.lane{padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.06);border-radius:var(--r)}
+.lane-tag{font-size:8px;color:var(--ink-4);letter-spacing:.1em}
+.lane h3{font-size:18px;margin-top:10px}
+.lane ul{list-style:none;margin-top:16px}
+.lane li{font-size:11px;color:var(--ink-2);padding:9px 0;border-bottom:1px solid var(--border)}
+
+/* AVAILABILITY */
+.avail{display:grid;grid-template-columns:1.2fr repeat(3,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.avail>div{padding:18px}
+.avail>div+div{border-left:1px solid var(--border)}
+.avail span{display:block;font-size:8px;color:var(--ink-4);letter-spacing:.08em;text-transform:uppercase}
+.avail b{display:block;font-size:11px;line-height:1.55;margin-top:7px}
+.avail-title b{font-size:18px;letter-spacing:-.02em}
+.avail-note{font-size:8px;color:var(--ink-4);margin-top:8px}
+
+/* CONTACT */
+.contact-row{display:grid;grid-template-columns:1fr auto;align-items:center;padding:18px 22px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.contact-label{display:block;font-size:8px;color:var(--ink-4);letter-spacing:.1em;text-transform:uppercase}
+.contact-email{display:block;font-size:13px;font-weight:600;margin-top:5px}
+.contact-action{font-size:9px;font-weight:600;border-bottom:1px solid #777;padding-bottom:4px}
+.sources{margin-top:28px;padding-top:14px;border-top:1px solid var(--border)}
+.sources summary{font-size:8px;color:var(--ink-4);letter-spacing:.08em;cursor:pointer}
+.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;margin-top:12px}
+.source-grid a{font-size:8px;color:#777;text-decoration:underline;text-decoration-color:#ccc}
+.footer{display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:16px;margin-top:45px;font-size:8px;color:var(--ink-4)}
+
+@media(max-width:800px){
+  body{zoom:1}.wrap{padding:0 20px 45px}
+  .summary,.ov-grid,.market-grid,.proof-grid,.lanes,.current,.feature,.video-row,.avail,.china-strip{grid-template-columns:1fr}
+  .china-stat,.avail>div+div{border-left:0;border-top:1px solid var(--border)}
+  .feature-photo{height:360px;border-left:0;border-top:1px solid var(--border)}
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact-mini:not(:nth-child(3n+1)){padding-left:0;border-left:0}
+  .contact-row{grid-template-columns:1fr;gap:18px}
+  .source-grid{grid-template-columns:1fr}
+}
+</style>
+
+<style>
+.buddy-content{display:grid;grid-template-columns:1.15fr .85fr;gap:6px;margin-top:6px}
+.buddy-album{padding:22px 24px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.buddy-album .bk{font-size:8px;color:var(--ink-4);letter-spacing:.1em}
+.buddy-album h4{font-size:18px;letter-spacing:-.025em;margin-top:10px}
+.buddy-album p{font-size:10px;line-height:1.75;color:var(--ink-3);margin-top:9px}
+.buddy-tracks{display:flex;gap:5px;margin-top:14px;flex-wrap:wrap}
+.buddy-tracks span{font-size:8px;background:#f5f5f3;padding:5px 7px;color:#555}
+.buddy-spoilers{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.buddy-video{min-height:145px;background:#111;color:#fff;padding:17px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.buddy-video:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#222,#111)}
+.buddy-video>*{position:relative;z-index:1}
+.buddy-video .bp{position:absolute;top:15px;left:15px;width:32px;height:32px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-size:10px;padding-left:2px}
+.buddy-video small{font-size:8px;color:#ffffff99;letter-spacing:.09em}
+.buddy-video b{font-size:12px;margin-top:4px}
+@media(max-width:800px){.buddy-content,.buddy-spoilers{grid-template-columns:1fr}}
+</style>
+
+</head>
+
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LTV53CV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<main class="wrap">
+
+<header class="topbar">
+  <div class="wordmark"><img src="/yoodayeon/2026/assets/pa-logo.svg" alt="PA"></div>
+  <div class="topbar-r">
+    <span class="badge">PRIVATE CLIENT</span>
+    <span class="ts">AUG 2026</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>YOU DAYEON</h1>
+  <div class="hero-meta">브랜드 파트너십 · 한국 / 중국 / 일본</div>
+</section>
+
+<div class="sec-t"><span>INDIVIDUAL SIGNALS</span><span class="stag">CURRENT</span></div>
+<section class="summary">
+  <a class="sc hl" href="https://www.instagram.com/dayeon_you/" target="_blank" rel="noopener">
+    <div class="sl"><span class="sdot"></span>Instagram</div>
+    <div class="sv">744K</div>
+    <div class="ss">@dayeon_you ↗</div>
+  </a>
+  <div class="sc">
+    <div class="sl"><span class="sdot"></span>China Platforms</div>
+    <div class="sv">1.0M+</div>
+    <div class="ss">Weibo · Xiaohongshu · Douyin · Bilibili</div>
+  </div>
+  <a class="sc" href="https://ktownpost.com/k-pop/daily-chart-you-dayeons-buddy-leads-daily-sales-with-1040-units/" target="_blank" rel="noopener">
+    <div class="sl"><span class="sdot"></span>BUDDY</div>
+    <div class="sv">#1</div>
+    <div class="ss">Ktown4u 일간 앨범 판매 차트 ↗</div>
+  </a>
+</section>
+
+<section class="china-strip">
+  <div class="china-label"><span>CHINA AUDIENCE</span><small>Jul 2026</small></div>
+  <div class="china-stat"><b>235K</b><span>Weibo</span></div>
+  <div class="china-stat"><b>276K</b><span>Xiaohongshu</span></div>
+  <div class="china-stat"><b>441K</b><span>Douyin</span></div>
+  <div class="china-stat"><b>66K</b><span>Bilibili</span></div>
+</section>
+
+<div class="sec-t"><span>OVERVIEW</span><span class="stag">WHY YOU DAYEON NOW</span></div>
+<section class="intro">
+  <div class="intro-eyebrow">WHY YOU DAYEON NOW</div>
+  <div class="intro-headline">
+    중국에서의 탄탄한 팬덤과 모멘텀을 기반으로,<br>
+    일본과 한국으로 활동 영역을 넓혀가는 성장기 솔로 아티스트.
+  </div>
+  <div class="intro-copy">
+    YOU DAYEON은 중국 시장에서 실질적인 팬덤과 오프라인 반응을 착실히 다져온 아티스트입니다.
+    현지 음원 차트 성과와 팬미팅·브랜드 활동으로 검증된 중국 내 모멘텀을 바탕으로,
+    최근 일본 공식 데뷔와 함께 활동 범위를 확장하고 있습니다.
+    국내에서는 아직 특정 상업적 이미지로 고착되지 않은 상태로,
+    아티스트의 본격적인 활동 확장기에 브랜드의 이미지를 자연스럽게 입히기 좋은 시점입니다.
+  </div>
+</section>
+
+<section class="ov-grid">
+  <article class="ov-card">
+    <h3>YOU DAYEON</h3>
+    <p>퍼포먼스와 비주얼, 그리고 실제 행동으로 이어지는 충성도 높은 팬덤을 함께 갖춘 성장기 솔로 아티스트.</p>
+    <ul class="ov-list">
+      <li>Instagram 약 74.4만</li>
+      <li>보컬 · 랩 · 댄스</li>
+      <li>Girls Planet 999 · SHOW ME THE MONEY 출연</li>
+      <li>뷰티 · 패션 · 라이프스타일 적합</li>
+    </ul>
+  </article>
+
+  <article class="ov-card">
+    <h3>Loyal Fanbase</h3>
+    <p>단순 팔로워 규모보다 실제 행동으로 이어지는 팬덤이 강점입니다. 중국에서는 팬미팅과 브랜드 행사 참여가 반복되며 현장 반응이 확인되고 있습니다.</p>
+    <ul class="ov-list">
+      <li>중국 주요 플랫폼 팬덤 합산 100만+</li>
+      <li>팬미팅 및 현지 이벤트 반복 수요</li>
+      <li>일본 공식 팬클럽 · bubble for JAPAN</li>
+      <li>온라인 관심이 실제 현장 참여로 연결</li>
+    </ul>
+  </article>
+
+  <article class="ov-card">
+    <h3>Growth Phase</h3>
+    <p>중국에서 쌓아온 견조한 기반을 바탕으로 일본에서 반응을 만들기 시작했고, 한국은 아직 상업적 이미지가 신선하게 남아 있습니다.</p>
+    <ul class="ov-list">
+      <li>중국 · 견조한 팬덤과 오프라인 반응</li>
+      <li>일본 · 공식 데뷔 이후 반응 형성</li>
+      <li>한국 · 개인 광고 노출이 아직 적은 시장</li>
+      <li>본격적인 활동 확장 단계</li>
+    </ul>
+  </article>
+</section>
+
+<div class="sec-t"><span>YOU DAYEON PROFILE</span><span class="stag">CORE TALENT</span></div>
+<section class="gc">
+  <div class="gc-h">
+    <h3>YOU DAYEON<small>솔로 아티스트</small></h3>
+    <div class="gc-meta"><b>744K</b><span>Instagram</span></div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-copy">
+      <h4>퍼포먼스와 비주얼,<br>그리고 충성도 높은 팬덤.</h4>
+      <p>
+        Girls Planet 999와 SHOW ME THE MONEY를 거쳐 솔로 아티스트로 기반을 착실히 쌓아왔습니다.
+        보컬·랩·댄스를 모두 소화하는 퍼포먼스와 강한 비주얼 아이덴티티에,
+        팬미팅과 공식 팬 커뮤니티로 이어지는 충성도 높은 팬덤을 함께 갖고 있습니다.
+        최근 일본 공식 데뷔와 신규 앨범 활동을 기점으로 본격적인 활동 확장기에 들어서고 있습니다.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-mini"><span>FORMAT</span><b>솔로 아티스트</b></div>
+        <div class="fact-mini"><span>Strength</span><b>보컬 · 랩 · 댄스</b></div>
+        <div class="fact-mini"><span>Instagram</span><b>744K</b></div>
+        <div class="fact-mini"><span>MARKETS</span><b>한국 · 중국 · 일본</b></div>
+        <div class="fact-mini"><span>FANBASE</span><b>충성도 · 오프라인 동원력</b></div>
+        <div class="fact-mini"><span>BEST FIT</span><b>뷰티 · 패션 · 라이프스타일</b></div>
+      </div>
+    </div>
+
+    <div class="feature-photo" style="background:#f7f7f7">
+      <img src="https://kpopping.com/documents/12/4/2303/Girls-Planet-999-K-Group-Introduction-Photos-You-Dayeon-documents-4.jpeg?v=3cf0a"
+           alt="YOU DAYEON"
+           style="object-fit:cover;object-position:center 18%">
+    </div>
+  </div>
+
+  <div class="video-row">
+    <a class="video-card" data-pa-video="Dream Rusher Official MV" href="https://www.youtube.com/watch?v=d9kivKbawxU" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/d9kivKbawxU/maxresdefault.jpg" alt="">
+      <div class="play">▶</div>
+      <div class="video-ov"><div class="vk">OFFICIAL MV</div><h4>Dream Rusher</h4><small>WATCH ↗</small></div>
+    </a>
+    <a class="video-card" data-pa-video="Dream Rusher Dance Performance" href="https://youtu.be/rrN7gFhKrEo" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/rrN7gFhKrEo/hqdefault.jpg" alt="">
+      <div class="play">▶</div>
+      <div class="video-ov"><div class="vk">DANCE PERFORMANCE</div><h4>Dream Rusher</h4><small>WATCH ↗</small></div>
+    </a>
+  </div>
+</section>
+
+<div class="sec-t"><span>MARKET MOMENTUM</span><span class="stag">CN · JP · KR</span></div>
+<section class="market-grid">
+  <article class="market-card">
+    <div class="mk">CHINA</div>
+    <h3>탄탄한 코어 팬덤과 오프라인 동원력을 갖춘 핵심 시장.</h3>
+    <p>현지 아티스트 협업곡 차트 1위, 지속적인 팬미팅 및 브랜드 활동을 통해 단순 소셜 팔로워를 넘어 실제 현장 방문과 반응으로 이어지는 견조한 모멘텀을 보유하고 있습니다.</p>
+    <ul>
+      <li>중국 주요 플랫폼 팬덤 합산 100만+</li>
+      <li>현지 아티스트 협업곡 차트 1위</li>
+      <li>팬미팅 · 브랜드 행사 · 현지 콘텐츠</li>
+    </ul>
+  </article>
+
+  <article class="market-card">
+    <div class="mk">JAPAN</div>
+    <h3>공식 데뷔와 함께 반응이 생겨나는 시작 단계.</h3>
+    <p>Nippon Columbia를 통한 공식 데뷔, 리테일 릴리즈 이벤트, 팬 커뮤니케이션 인프라 구축 등 현지 활동 기반을 차근차근 다지며 모멘텀을 만들어가는 구간입니다.</p>
+    <ul>
+      <li>Nippon Columbia 공식 데뷔</li>
+      <li>HMV · Tower Records · Marui 릴리즈 이벤트</li>
+      <li>공식 팬클럽 · bubble for JAPAN</li>
+    </ul>
+  </article>
+
+  <article class="market-card">
+    <div class="mk">KOREA</div>
+    <h3>해외 모멘텀 대비 상업적 이미지가 신선하게 남아있는 시장.</h3>
+    <p>해외에서 착실히 쌓아온 기반에 비해 국내 광고 노출이 적어 특정 이미지로 굳어지지 않았습니다. 브랜드가 원하는 톤앤매너를 비교적 선명하게 반영할 수 있는 상태입니다.</p>
+    <ul>
+      <li>개인 광고 노출 과밀도 낮음</li>
+      <li>뷰티 · 패션 · 라이프스타일 확장 가능</li>
+      <li>본격적인 국내 활동 확대 전 선점 가능</li>
+    </ul>
+  </article>
+</section>
+
+<div class="sec-t"><span>CURRENT MOMENTUM</span><span class="stag">SUMMER 2026</span></div>
+<section class="current">
+  <article class="release">
+    <div class="rdate">2026.08.25 · NEW RELEASE</div>
+    <h3>Single Album<br>『Buddy』</h3>
+    <p>
+      일본적인 감성과 노스탤지어를 담은 우정에 관한 신곡입니다.
+      기존의 강한 퍼포먼스 이미지와는 다른 친근하고 감성적인 면을 보여주며,
+      여성 팬들이 공감하기 쉬운 우정과 추억의 정서를 중심으로 이번 활동을 통해 여성 팬층을 한층 넓힐 것으로 기대됩니다.
+      Ktown4u 일간 앨범 판매 차트 1위로 초기 구매 반응도 확인했습니다.
+    </p>
+  </article>
+
+  <div class="timeline">
+    <div class="trow"><span>2026.04</span><b>bubble for JAPAN 론칭</b></div>
+    <div class="trow"><span>2026.06.24</span><b>일본 데뷔 앨범 『Dream Rusher』</b></div>
+    <div class="trow"><span>2026.06</span><b>HMV / Tower Records / Marui 릴리즈 이벤트</b></div>
+    <div class="trow"><span>2026.07</span><b>중국 주요 플랫폼 팔로워 합산 100만+</b></div>
+    <div class="trow"><span>2026.08.25</span><b>싱글 앨범 『Buddy』</b></div>
+    <div class="trow"><span>2026.08.29</span><b>상하이 팬미팅</b></div>
+  </div>
+</section>
+
+
+
+<section class="buddy-content">
+  <article class="buddy-album">
+    <div class="bk">SINGLE ALBUM · 2026.08.25</div>
+    <h4>『Buddy』</h4>
+    <p>
+      ‘Buddy’는 학창 시절 단짝 친구와의 노스탤직한 추억을 팬덤 NEKKO와의 관계로 풀어낸 팬송입니다.
+      UK garage 기반의 ‘Buddy’와 시부야케이 기반의 ‘shuwa’를 통해 일본적인 감성과 귀엽고 친근한 면을 함께 보여줍니다.
+      현재 활동을 통해 기존 팬덤의 결속을 높이는 동시에 여성 팬층을 추가로 넓힐 수 있는 음악 자산으로 기대됩니다.
+    </p>
+    <div style="font-size:9px;font-weight:600;margin-top:13px">Ktown4u 일간 앨범 판매 차트 #1</div><div class="buddy-tracks">
+      <span>01 Buddy</span>
+      <span>02 shuwa</span>
+      <span>03 Buddy Inst.</span>
+      <span>04 shuwa Inst.</span>
+    </div>
+  </article>
+  <div class="buddy-spoilers">
+    <a class="buddy-video" data-pa-video="Buddy Melody Spoiler" href="https://x.com/YOUDAYEON_MMG" target="_blank" rel="noopener">
+      <span class="bp">▶</span><small>MELODY SPOILER</small><b>Buddy</b>
+    </a>
+    <a class="buddy-video" data-pa-video="shuwa Audio Snippet" href="https://x.com/YOUDAYEON_MMG" target="_blank" rel="noopener">
+      <span class="bp">▶</span><small>AUDIO SNIPPET</small><b>shuwa</b>
+    </a>
+  </div>
+</section>
+
+<div class="sec-t"><span>CHINA MOMENTUM</span><span class="stag">MUSIC · FANBASE · OFFLINE</span></div>
+<section class="proof-grid">
+  <article class="proof-card" style="background:var(--blue-light)">
+    <div class="pk">WHY IT MATTERS</div>
+    <h3>단발성 이슈에 그치지 않고, 현지 반응과 모멘텀이 꾸준히 이어지는 구조.</h3>
+    <p>
+      현지 아티스트 협업, 음원 차트 성과, 오프라인 팬미팅 및 브랜드 행사 참여까지 단계적으로 진행하며
+      중국 시장에서 실질적인 반응을 유지하고 있습니다.
+    </p>
+    <div class="proof-meta">음악 · 팬덤 · 오프라인 활동</div>
+  </article>
+
+  <article class="proof-card">
+    <div class="pk">DDD · WITH 沙一汀EL</div>
+    <h3>현지 아티스트와의 협업이 차트 성과로 연결.</h3>
+    <p>
+      중국 아티스트 沙一汀EL과 함께 발표한 ‘DDD’가 현지 주요 음악 플랫폼 차트 1위를 기록하며,
+      다연의 중국 내 반응이 소셜을 넘어 실제 음악 소비로 이어질 수 있음을 보여줬습니다.
+    </p>
+    <div class="proof-meta">현지 협업 · 음원 차트 1위</div>
+  </article>
+</section>
+
+<div class="sec-t"><span>SELECTED COMMERCIAL ACTIVITY</span><span class="stag">FASHION</span></div>
+<section class="proof-grid">
+  <article class="proof-card">
+    <div class="pk">KWL</div>
+    <h3>Fashion Brand Ambassador</h3>
+    <p>
+      중국 시장에서 전개되는 한국 여성 패션 브랜드 KWL의 브랜드 앰배서더로 활동.
+      패션 화보와 현지 콘텐츠를 통해 다연의 비주얼과 중국 팬덤을 함께 활용한 대표적인 브랜드 사례입니다.
+    </p>
+    <div class="proof-meta">패션 · 브랜드 앰배서더 · 중국 현지 활동</div>
+  </article>
+
+  <article class="proof-card">
+    <div class="pk">TOKYO GIRLS COLLECTION</div>
+    <h3>Fashion Event Appearance</h3>
+    <p>
+      일본 대표 패션 이벤트 Tokyo Girls Collection에 출연하며 음악 활동 외에도 패션 카테고리에서의 적합성을 보여줬습니다.
+      일본 공식 데뷔 이후 확대되는 현지 활동과 함께 패션·뷰티 브랜드가 활용하기 좋은 레퍼런스입니다.
+    </p>
+    <div class="proof-meta">일본 · 패션 이벤트 · 비주얼 레퍼런스</div>
+  </article>
+</section>
+
+<div class="sec-t"><span>COMMERCIAL VALUE</span><span class="stag">WHY BRANDS</span></div>
+<section class="proof-grid">
+  <article class="proof-card">
+    <div class="pk">LOYAL FANBASE</div>
+    <h3>실제 오프라인 유입으로 연결되는 팬덤의 행동력.</h3>
+    <p>
+      팬미팅과 현지 브랜드 이벤트에서 확인되는 팬들의 참여도와 충성도가 강점입니다.
+      단순한 콘텐츠 노출을 넘어 실제 현장 방문과 브랜드 접점 형성으로 연결될 수 있는 팬덤을 보유하고 있습니다.
+    </p>
+    <div class="proof-meta">팬미팅 · 현장 참여 · 브랜드 접점</div>
+  </article>
+
+  <article class="proof-card">
+    <div class="pk">CROSS-BORDER UPSIDE</div>
+    <h3>중국에서의 견조한 기반을 바탕으로 확장성을 도모하는 성장 국면.</h3>
+    <p>
+      중국에서 이미 확인된 팬덤과 상업적 반응을 기반으로 일본에서는 공식 활동을 확대하고,
+      한국에서는 새로운 브랜드 이미지를 만들어갈 수 있습니다.
+      아직 체급이 고정된 단계가 아니라 성과가 쌓이며 활동 규모가 커지는 구간이라는 점이 브랜드에게 선점 기회를 제공합니다.
+    </p>
+    <div class="proof-meta">중국 기반 · 일본 성장 · 한국 확장</div>
+  </article>
+</section>
+
+<div class="sec-t"><span>PARTNERSHIP DIRECTION</span><span class="stag">BEST FIT</span></div>
+<section class="lanes">
+  <article class="lane">
+    <div class="lane-tag">MODE 01 · VISUAL / STYLE</div>
+    <h3>Beauty · Fashion</h3>
+    <ul>
+      <li>뷰티 · 색조 · 렌즈 · 헤어</li>
+      <li>패션 · 신발 · 액세서리</li>
+      <li>에디토리얼형 캠페인 · 소셜 콘텐츠</li>
+      <li>강한 비주얼과 패션 소화력을 중심으로 활용</li>
+    </ul>
+  </article>
+
+  <article class="lane">
+    <div class="lane-tag">MODE 02 · CROSS-BORDER</div>
+    <h3>KR · CN · JP</h3>
+    <ul>
+      <li>한국 모델 계약 + 중국/일본 확장 캠페인</li>
+      <li>중국 리테일 이벤트 / 팬 활성화</li>
+      <li>일본 콘텐츠 / 릴리즈 연계 활동</li>
+      <li>한 명의 모델로 세 시장의 성장 스토리 연결</li>
+    </ul>
+  </article>
+</section>
+
+<div class="sec-t"><span>AVAILABILITY</span><span class="stag">2026 H2</span></div>
+<section class="avail">
+  <div class="avail-title">
+    <span>BRAND PARTNERSHIP</span>
+    <b>2026 H2<br>협의 가능</b>
+  </div>
+  <div>
+    <span>Markets</span>
+    <b>한국 · 중국 · 일본</b>
+  </div>
+  <div>
+    <span>Formats</span>
+    <b>캠페인 · 콘텐츠<br>오프라인 이벤트</b>
+  </div>
+  <div>
+    <span>Category</span>
+    <b>뷰티 · 패션<br>라이프스타일</b>
+  </div>
+</section>
+<p class="avail-note">※ 일정·활용 범위·카테고리 전속 및 지역별 권리는 프로젝트별 협의.</p>
+
+<div class="sec-t"><span>CONTACT</span><span class="stag">BRAND PARTNERSHIP INQUIRY</span></div>
+<section class="contact-row">
+  <div>
+    <span class="contact-label">BRAND PARTNERSHIP Inquiry</span>
+    <span class="contact-email">배대영 · Manager</span>
+    <span style="display:block;font-size:9px;color:var(--ink-4);margin-top:5px">young@plusalpha.agency</span>
+  </div>
+  <a class="contact-action" data-pa-cta="brand_partnership_email"
+     href="mailto:young@plusalpha.agency?subject=YOU%20DAYEON%20Brand%20Partnership">
+    CONTACT PA ↗
+  </a>
+</section>
+
+<section class="sources">
+<details>
+  <summary>DATA SOURCES</summary>
+  <div class="source-grid">
+    <a href="https://socialblade.com/instagram/user/dayeon_you" target="_blank">Instagram · Social Blade</a>
+    <a href="https://weibo.com/u/7977195728" target="_blank">YOU DAYEON · Official Weibo</a>
+    <a href="https://search.bilibili.com/all?keyword=%E6%9F%B3%E5%A4%9A%E6%81%8B" target="_blank">YOU DAYEON · Bilibili</a>
+    <a href="https://columbia.jp/artist-info/youdayeon/" target="_blank">Nippon Columbia · Official Artist Page</a>
+    <a href="https://prtimes.jp/main/html/rd/p/000004969.000019470.html" target="_blank">Japan Debut · Nippon Columbia / PR TIMES</a>
+    <a href="https://m-upholdings.co.jp/news/?id=1000006489" target="_blank">bubble for JAPAN</a>
+    <a href="https://dayeonyou.bstage.in/community" target="_blank">YOU DAYEON · Official Fan Community</a>
+    <a href="https://www.youtube.com/watch?v=d9kivKbawxU" target="_blank">Dream Rusher · Official MV</a>
+    <a href="https://www.sina.cn/news/detail/5260424603238670.html" target="_blank">DDD · NetEase Cloud Music 공식 발매</a>
+    <a href="https://www.sohu.com/a/984809122_122635510" target="_blank">DDD · China chart performance</a>
+    <a href="https://cn.applemusic.co.kr/Mobile/Product/Detail/view/pid/117903/cid/1225" target="_blank">Buddy · Album / Track information</a>
+    <a href="https://x.com/YOUDAYEON_MMG" target="_blank">Buddy · Official release updates</a>
+  </div>
+</details>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Plus Alpha Agency</span>
+  <span>talent.plusalpha.agency/yoodayeon/2026</span>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var ctx = window.PA_ANALYTICS || { prospect_ref:'direct', talent:'yoodayeon', asset:'client_profile_2026' };
+  function track(event, params) {
+    params = params || {};
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({
+      event:event,
+      prospect_ref:ctx.prospect_ref,
+      talent:ctx.talent,
+      asset:ctx.asset
+    }, params));
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+
+    if (a.dataset.paVideo) {
+      track('pa_video_click', {
+        content_name:a.dataset.paVideo,
+        content_type:'video',
+        link_url:a.href
+      });
+    } else if (a.dataset.paCta) {
+      track('pa_cta_click', {
+        cta_name:a.dataset.paCta,
+        link_url:a.href
+      });
+    } else if (a.closest('.source-grid')) {
+      track('pa_reference_click', {
+        content_name:(a.textContent || '').trim(),
+        link_url:a.href
+      });
+    } else if (/instagram|weibo|bilibili|columbia|bubble/i.test(a.href)) {
+      track('pa_social_click', {
+        platform:(a.textContent || '').trim(),
+        link_url:a.href
+      });
+    }
+  });
+
+  var s50=false,s90=false;
+  window.addEventListener('scroll', function(){
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max <= 0) return;
+    var depth = window.scrollY / max * 100;
+    if (!s50 && depth >= 50) {
+      s50=true; track('pa_scroll',{scroll_depth:'50'});
+    }
+    if (!s90 && depth >= 90) {
+      s90=true; track('pa_scroll',{scroll_depth:'90'});
+    }
+  }, {passive:true});
+})();
+</script>
+
+</body>
+</html>
