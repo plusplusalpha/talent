@@ -1,0 +1,20 @@
+Upload these files/folders into the ROOT of the existing talent-dino GitHub repository.
+
+ADD:
+yoodayeon/
+  2026/
+    index.html
+    assets/
+      pa-logo.svg
+
+REPLACE:
+vercel.json
+
+DO NOT MOVE OR DELETE:
+dino-svt/
+README.md
+
+After commit, Vercel should redeploy automatically.
+Test:
+https://talent.plusalpha.agency/dino-svt/2026
+https://talent.plusalpha.agency/yoodayeon/2026
