@@ -6,26 +6,14 @@
 window.dataLayer = window.dataLayer || [];
 (function() {
   var params = new URLSearchParams(window.location.search);
-  var incoming = params.get('r');
-  if (incoming) {
-    try { localStorage.setItem('pa_prospect_ref', incoming); } catch(e) {}
-  }
-  var stored = '';
-  try { stored = localStorage.getItem('pa_prospect_ref') || ''; } catch(e) {}
-  var ref = incoming || stored || 'direct';
+  var incoming = params.get('r') || '';
+  var ref = /^[A-Za-z0-9_-]{20,64}$/.test(incoming) ? incoming : 'direct';
 
   window.PA_ANALYTICS = {
     prospect_ref: ref,
     talent: 'dino',
     asset: 'client_profile_2026'
   };
-
-  window.dataLayer.push({
-    event: 'pa_report_view',
-    prospect_ref: ref,
-    talent: 'dino',
-    asset: 'client_profile_2026'
-  });
 })();
 </script>
 
@@ -963,6 +951,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     asset: 'client_profile_2026'
   };
 
+  function collect(name, params) {
+    if (ctx.prospect_ref === 'direct' || !window.crypto || !window.crypto.randomUUID) return;
+    var metadata = name === 'pa_scroll' && params
+      ? { scroll_depth: String(params.scroll_depth || '') }
+      : undefined;
+    fetch('https://app.plusalpha.agency/api/public/engagement', {
+      method: 'POST',
+      mode: 'cors',
+      credentials: 'omit',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        outreachRef: ctx.prospect_ref,
+        event: name,
+        eventId: window.crypto.randomUUID(),
+        metadata: metadata
+      })
+    }).catch(function(){});
+  }
+
   function track(name, params){
     var payload = {
       event: name,
@@ -975,7 +983,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
+    collect(name, params);
   }
+
+  track('pa_report_view');
 
   document.addEventListener('click', function(e){
     var a = e.target.closest('a');
