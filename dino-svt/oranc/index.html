@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
 <title>ORAN-C × DINO / PICHEOLIN — PA</title>
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link href="https://cdn.jsdelivr.net" rel="preconnect"/>
+<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet"/>
 <style>
 :root{
   --bg:#efefec;
@@ -387,290 +388,252 @@ h3{
 </head>
 <body>
 <main class="wrap">
-
 <div class="confidential-bar">
-  <div class="confidential-mark">CONFIDENTIAL</div>
-  <div>FOR ORAN-C INTERNAL REVIEW ONLY</div>
+<div class="confidential-mark">CONFIDENTIAL</div>
+<div>FOR ORAN-C INTERNAL REVIEW ONLY</div>
 </div>
-
 <header class="header">
-  <img class="logo" src="data:image/png;base64,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" alt="PA">
-  <div class="header-meta">ORAN-C × DINO / PICHEOLIN · SEP 03 2026</div>
+<img alt="PA" class="logo" src="data:image/png;base64,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"/>
+<div class="header-meta">ORAN-C × DINO / PICHEOLIN · SEP 03 2026</div>
 </header>
-
 <section class="panel">
-  <div class="index">MEETING THESIS</div>
-  <h1>최고의 헤리티지를 가진 오란씨,<br>이제 다시 소비될 ‘확실한 명분’을 만듭니다.</h1>
-  <p class="lead">
-    오란씨의 맛, 탄산, 비타민C, 그리고 55년의 헤리티지는 이미 검증된 자산입니다.
-    필요한 것은 이 자산을 2026년 소비자 문화의 최전선에서 터뜨릴 ‘새로운 동력’입니다.
+<div class="index">MEETING THESIS</div>
+<h1>최고의 헤리티지를 가진 오란씨,<br/>이제 다시 소비될 ‘확실한 명분’을 만듭니다</h1>
+<p class="lead">
+    오란씨의 맛, 탄산, 비타민C, 그리고 55년의 헤리티지는 이미 검증된 자산입니다
+    필요한 것은 이 자산을 2026년 소비자 문화의 최전선에서 터뜨릴 ‘새로운 동력’입니다
     </p>
-  <div class="statement"> 오란씨라는 브랜드를 다시 놀이터로 만드는 캠페인.</div>
-  <div class="foot">PA · Working Conversation Deck</div>
+<div class="statement"> 오란씨라는 브랜드를 다시 놀이터로 만드는 캠페인</div>
+<div class="foot">PA · Working Conversation Deck</div>
 </section>
-
 <section class="panel">
-  <div class="index">01 · THE ASSET</div>
-  <h2 class="split-head"><span>오란씨는 복고를 빌려올 필요가 없습니다.</span><span>이미 대체 불가능한 55년의 ‘진짜 헤리티지’를 가졌기 때문입니다.</span></h2>
-
-  <div class="grid3">
-    <article class="card">
-      <div class="kicker">HERITAGE</div>
-      <h3>55 Years</h3>
-      <p>55년 축적된 세대 관통형 인지도 <br> 신생 브랜드가 살 수 없는 시간의 자산.</p>
-    </article>
-    <article class="card soft">
-      <div class="kicker">MUSIC IP</div>
-      <h3>Iconic CM Song</h3>
-      <p>전국민이 기억하는 시그니처 멜로디 <br> 재가공·리믹스·챌린지가 가능한 강력한 음원 자산.</p>
-    </article>
-    <article class="card">
-      <div class="kicker">TIMING</div>
-      <h3>Brand Refresh</h3>
-      <p>55주년 BI 리뉴얼 모멘텀 <br> 패키지 교체를 넘어 브랜드 인식을 리프레시할 골든타임.</p>
-    </article>
-  </div>
-  <div class="foot">The opportunity starts from assets ORAN-C already owns.</div>
+<div class="index">01 · THE ASSET</div>
+<h2 class="split-head"><span>오란씨는 복고를 빌려올 필요가 없습니다</span><span>이미 대체 불가능한 55년의 ‘진짜 헤리티지’를 가졌기 때문입니다</span></h2>
+<div class="grid3">
+<article class="card">
+<div class="kicker">HERITAGE</div>
+<h3>55 Years</h3>
+<p>55년 축적된 세대 관통형 인지도 <br/> 신생 브랜드가 살 수 없는 시간의 자산</p>
+</article>
+<article class="card soft">
+<div class="kicker">MUSIC IP</div>
+<h3>Iconic CM Song</h3>
+<p>전국민이 기억하는 시그니처 멜로디 <br/> 재가공·리믹스·챌린지가 가능한 강력한 음원 자산</p>
+</article>
+<article class="card">
+<div class="kicker">TIMING</div>
+<h3>Brand Refresh</h3>
+<p>55주년 BI 리뉴얼 모멘텀 <br/> 패키지 교체를 넘어 브랜드 인식을 리프레시할 골든타임</p>
+</article>
+</div>
+<div class="foot">The opportunity starts from assets ORAN-C already owns</div>
 </section>
-
 <section class="panel">
-  <div class="index">02 · CULTURAL MECHANIC</div>
-  <h2 class="split-head"><span>요즘의 복고는 옛것의 단순 재현이 아닙니다.</span><span>‘아는 맛’을 지금의 어법으로 완전히 뒤틀 때 대중이 반응합니다.</span></h2>
-
-  <div class="eq">
-      <span class="token">FAMILIAR · 익숙한 브랜드 자산</span>
-      <span class="arrow">×</span>
-      <span class="token">UNEXPECTED · 엉뚱한 맥락과의 충돌</span>
-      <span class="arrow">=</span>
-      <span class="token">자발적 확산</span>
-    </div>
-
-  <div class="grid4">
-    <div class="ref">
-      <span class="ref-num">01 · 지마켓</span>
-      <strong>히트곡 × 과장된 유머</strong>
-      <p>익숙한 히트곡과 원곡 가수를 과장된 광고 콘텐츠로 재생산.</p>
-      <a href="https://youtu.be/E2T8j0zepkY?si=1GP5h-G9cfIXYbmZ" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
-    </div>
-    <div class="ref">
-      <span class="ref-num">02 · 버거킹</span>
-      <strong>노포 감성 × 현대 브랜드</strong>
-      <p>한국형 노포의 시각 언어를 현대적인 브랜드 캠페인에 적용해 익숙함을 새롭게 소비하게 만든 사례.</p>
-      <a href="https://www.instagram.com/reel/DbRyWhrkQIp/" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
-    </div>
-    <div class="ref">
-      <span class="ref-num">03 · 낭만부부</span>
-      <strong>젊은 인물 × 옛 세대 페르소나</strong>
-      <p>젊은 창작자가 50대 부부의 말투·관계·정서를 정교하게 재현하면서, ‘옛것의 재현’ 자체를 현재형 콘텐츠로 만든 사례.</p>
-      <a href="https://youtu.be/jVvs7_vyi1k?si=JfnMj-B8nRtjfha5" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
-    </div>
-    <div class="ref">
-      <span class="ref-num">04 · 빅뱅 80년대 리메이크</span>
-      <strong> 강력한 음악 IP x 레트로 재해석 </strong>
-      <p>〈BANG BANG BANG〉 같은 익숙한 K-POP 히트곡을 AI 를 활용하여 7080풍 사운드와 비주얼로 재구성하여 놀이를 만든 사례.</p>
-      <a href="https://www.youtube.com/results?search_query=BIGBANG+BANG+BANG+BANG+80s+version" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
-    </div>
-  </div>
-
-  <div class="foot">Reference = 작동 원리의 증거. 그대로 복제하는 것이 아니라 ORAN-C만의 자산으로 다시 설계.</div>
+<div class="index">02 · CULTURAL MECHANIC</div>
+<h2 class="split-head"><span>요즘의 복고는 옛것의 단순 재현이 아닙니다</span><span>‘아는 맛’을 지금의 어법으로 완전히 뒤틀 때 대중이 반응합니다</span></h2>
+<div class="eq">
+<span class="token">FAMILIAR · 익숙한 브랜드 자산</span>
+<span class="arrow">×</span>
+<span class="token">UNEXPECTED · 엉뚱한 맥락과의 충돌</span>
+<span class="arrow">=</span>
+<span class="token">자발적 확산</span>
+</div>
+<div class="grid4">
+<div class="ref">
+<span class="ref-num">01 · 지마켓</span>
+<strong>히트곡 × 과장된 유머</strong>
+<p>익숙한 히트곡과 원곡 가수를 과장된 광고 콘텐츠로 재생산</p>
+<a href="https://youtu.be/E2T8j0zepkY?si=1GP5h-G9cfIXYbmZ" rel="noopener" target="_blank">VIEW REFERENCE ↗</a>
+</div>
+<div class="ref">
+<span class="ref-num">02 · 버거킹</span>
+<strong>노포 감성 × 현대 브랜드</strong>
+<p>한국형 노포의 시각 언어를 현대적인 브랜드 캠페인에 적용해 익숙함을 새롭게 소비하게 만든 사례</p>
+<a href="https://www.instagram.com/reel/DbRyWhrkQIp/" rel="noopener" target="_blank">VIEW REFERENCE ↗</a>
+</div>
+<div class="ref">
+<span class="ref-num">03 · 낭만부부</span>
+<strong>젊은 인물 × 옛 세대 페르소나</strong>
+<p>젊은 창작자가 50대 부부의 말투·관계·정서를 정교하게 재현하면서, ‘옛것의 재현’ 자체를 현재형 콘텐츠로 만든 사례</p>
+<a href="https://youtu.be/jVvs7_vyi1k?si=JfnMj-B8nRtjfha5" rel="noopener" target="_blank">VIEW REFERENCE ↗</a>
+</div>
+<div class="ref">
+<span class="ref-num">04 · 빅뱅 80년대 리메이크</span>
+<strong> 강력한 음악 IP x 레트로 재해석 </strong>
+<p>〈BANG BANG BANG〉 같은 익숙한 K-POP 히트곡을 AI 를 활용하여 7080풍 사운드와 비주얼로 재구성하여 놀이를 만든 사례</p>
+<a href="https://www.youtube.com/results?search_query=BIGBANG+BANG+BANG+BANG+80s+version" rel="noopener" target="_blank">VIEW REFERENCE ↗</a>
+</div>
+</div>
+<div class="foot">Reference = 작동 원리의 증거 그대로 복제하는 것이 아니라 ORAN-C만의 자산으로 다시 설계</div>
 </section>
-
 <section class="panel">
-  <div class="index">03 · WHY PICHEOLIN</div>
-  <h2 class="split-head"><span>피철인은 단순히 복고를 연기하는 아이돌이 아닙니다.</span><span>복고를 최신 밈으로 직접 번역해내는 ‘문화 번역기’입니다.</span></h2>
-
-  <div class="grid2">
-    <article class="card dark">
-      <div class="kicker">DINO</div>
-      <h3>Contemporary Reach</h3>
-      <p>글로벌 팬덤 기반과 압도적 퍼포먼스 신뢰도 — 초기 확산 엔진.</p>
-    </article>
-    <article class="card soft">
-      <div class="kicker">PICHEOLIN</div>
-      <h3>Meme-Native Retro Character</h3>
-      <p>레트로 방송 문법과 ‘흥’을 Z세대 밈으로 즐기게 만드는 독보적 부캐.</p>
-    </article>
-  </div>
-
-  <div class="statement">진짜 역사를 가진 ‘오란씨’와<br>그 역사를 놀이로 바꾸는 ‘피철인’의 독점적 결합.</div>
-  <div class="foot">일반 아이돌 × Retro = Campaign Concept / PICHEOLIN × Retro = Character itself.</div>
+<div class="index">03 · WHY PICHEOLIN</div>
+<h2 class="split-head"><span>피철인은 단순히 복고를 연기하는 아이돌이 아닙니다</span><span>복고를 최신 밈으로 직접 번역해내는 ‘문화 번역기’입니다</span></h2>
+<div class="grid2">
+<article class="card dark">
+<div class="kicker">DINO</div>
+<h3>Contemporary Reach</h3>
+<p>글로벌 팬덤 기반과 압도적 퍼포먼스 신뢰도 — 초기 확산 엔진</p>
+</article>
+<article class="card soft">
+<div class="kicker">PICHEOLIN</div>
+<h3>Meme-Native Retro Character</h3>
+<p>레트로 방송 문법과 ‘흥’을 Z세대 밈으로 즐기게 만드는 독보적 부캐</p>
+</article>
+</div>
+<div class="statement">진짜 역사를 가진 ‘오란씨’와<br/>그 역사를 놀이로 바꾸는 ‘피철인’의 독점적 결합</div>
+<div class="foot">일반 아이돌 × Retro = Campaign Concept / PICHEOLIN × Retro = Character itself</div>
 </section>
-
 <section class="panel">
-  <div class="index">04 · THE BIG IDEA</div>
-  <h2 style="margin-bottom:18px" class="split-head"><span>추억 속의 브랜드에서,</span><span>지금 세대가 끊임없이 가지고 노는 브랜드로.</span></h2>
-    <div class="bigidea-copy">55년의 오란씨 헤리티지를 피철인과 함께 ‘재생산 가능한 문화 콘텐츠’로 전환한다.</div>
-  </div>
+<div class="index">04 · THE BIG IDEA</div>
+<h2 class="split-head" style="margin-bottom:18px"><span>추억 속의 브랜드에서,</span><span>지금 세대가 끊임없이 가지고 노는 브랜드로</span></h2>
+<div class="bigidea-copy">55년의 오란씨 헤리티지를 피철인과 함께 ‘재생산 가능한 문화 콘텐츠’로 전환한다</div>
 
-  <div class="flow">
-    <div><span>01 · HERO</span><strong>DINO → PICHEOLIN</strong><p>DINO → 피철인 페르소나 전환. 오란씨의 리프레시 모멘텀을 시각화.</p></div>
-    <div><span>02 · MUSIC</span><strong>ORAN-C SONG</strong><p>CM송의 음원 IP화. 단순 BGM을 넘어 챌린지·리믹스 음원으로 확장.</p></div>
-    <div><span>03 · MEME</span><strong>SHORT-FORM / REMIX</strong><p>숏폼 생태계 구축. 유저가 자발적으로 자르고 재가공하는 플레이 포맷.</p></div>
-    <div><span>04 · PLAY</span><strong>AI / PARTICIPATION</strong><p>AI & 멀티 포맷 확장. 하나의 아이디어를 다채로운 비주얼·장르 놀이터로 증식.</p></div>
-  </div>
-  <div class="foot">Detailed creative is intentionally held for the next treatment stage.</div>
+<div class="flow">
+<div><span>01 · HERO</span><strong>DINO → PICHEOLIN</strong><p>DINO → 피철인 페르소나 전환 오란씨의 리프레시 모멘텀을 시각화</p></div>
+<div><span>02 · MUSIC</span><strong>ORAN-C SONG</strong><p>CM송의 음원 IP화 단순 BGM을 넘어 챌린지·리믹스 음원으로 확장</p></div>
+<div><span>03 · MEME</span><strong>SHORT-FORM / REMIX</strong><p>숏폼 생태계 구축 유저가 자발적으로 자르고 재가공하는 플레이 포맷</p></div>
+<div><span>04 · PLAY</span><strong>AI / PARTICIPATION</strong><p>AI &amp; 멀티 포맷 확장 하나의 아이디어를 다채로운 비주얼·장르 놀이터로 증식</p></div>
+</div>
+<div class="foot">Detailed creative is intentionally held for the next treatment stage</div>
 </section>
-
 <section class="panel short">
-  <div class="index">05 · WHY NOW</div>
-  <h2 class="split-head"><span>이 타이밍을 놓치면 만들 수 없는</span><span>세 가지 모멘텀.</span></h2>
-
-  <div class="why-now">
-    <div>
-      <small>BRAND TIMING</small>
-      <strong>55주년 리브랜딩</strong>
-      <p>55주년 BI 리뉴얼이라는 명확한 브랜드 전환점.</p>
-    </div>
-    <div>
-      <small>TALENT TIMING</small>
-      <strong>피철인 상승 구간</strong>
-      <p>‘피철인’ 부캐 IP의 화제성이 대중적으로 가장 가파르게 상승하는 구간.</p>
-    </div>
-    <div>
-      <small>PRODUCTION TIMING</small>
-      <strong>9–10월 제작 Window</strong>
-      <p>입대 전 최적의 사전 제작 골든타임 — 9~10월 Window.</p>
-    </div>
-  </div>
+<div class="index">05 · WHY NOW</div>
+<h2 class="split-head"><span>이 타이밍을 놓치면 만들 수 없는</span><span>세 가지 모멘텀</span></h2>
+<div class="why-now">
+<div>
+<small>BRAND TIMING</small>
+<strong>55주년 리브랜딩</strong>
+<p>55주년 BI 리뉴얼이라는 명확한 브랜드 전환점</p>
+</div>
+<div>
+<small>TALENT TIMING</small>
+<strong>피철인 상승 구간</strong>
+<p>‘피철인’ 부캐 IP의 화제성이 대중적으로 가장 가파르게 상승하는 구간</p>
+</div>
+<div>
+<small>PRODUCTION TIMING</small>
+<strong>9–10월 제작 Window</strong>
+<p>입대 전 최적의 사전 제작 골든타임 — 9~10월 Window</p>
+</div>
+</div>
 </section>
-
-
-
 <section class="panel">
-  <div class="index">06 · BRAND FIT</div>
-  <h2 class="split-head"><span>오란씨가 고민해 온 타깃 확장과 브랜드 리프레시.</span><span>이번에는 ‘건강함’보다 ‘다시 재미있어지는 것’에서 시작합니다.</span></h2>
-
-  <p class="lead">
+<div class="index">06 · BRAND FIT</div>
+<h2 class="split-head"><span>오란씨가 고민해 온 타깃 확장과 브랜드 리프레시</span><span>이번에는 ‘건강함’보다 ‘다시 재미있어지는 것’에서 시작합니다</span></h2>
+<p class="lead">
     현재 오란씨는 가족·자녀 대상의 비타민C·저칼로리 소구만으로는 메인 탄산 소비층인 20–30대에게
-    충분히 강한 선택 이유를 만들기 어렵다는 과제를 안고 있습니다.
+    충분히 강한 선택 이유를 만들기 어렵다는 과제를 안고 있습니다
     패키지 리뉴얼과 함께 필요한 것은 제품의 장점을 다시 설명하는 것보다,
-    젊은 소비자가 오란씨를 발견하고 공유하고 직접 가지고 놀 수 있는 새로운 문화적 접점입니다.
+    젊은 소비자가 오란씨를 발견하고 공유하고 직접 가지고 놀 수 있는 새로운 문화적 접점입니다
   </p>
-
-  <div class="brandfit">
-    <div>
-      <small>CURRENT LIMIT</small>
-      <strong>기능 소구만으로는 2030과의 접점이 약함</strong>
-      <p>가족·자녀 대상의 비타민C·저칼로리 메시지만으로는 메인 탄산 소비층에게 강한 문화적 선택 이유를 만들기 어려움.</p>
-    </div>
-    <div>
-      <small>NEW TARGET</small>
-      <strong>2030의 자발적 ‘Play Culture’ 구축</strong>
-      <p>패키지 리뉴얼과 함께 젊은 소비자가 오란씨를 발견하고, 공유하고, 직접 가지고 놀 수 있는 접점 설계.</p>
-    </div>
-    <div>
-      <small>NEW INTERPRETATION</small>
-      <strong>Retro Repeat가 아닌 Heritage Reboot</strong>
-      <p>6년간 이어온 레트로의 단순 반복을 끊고, 55년 역사와 CM송을 지금의 음악·밈·콘텐츠 문법으로 재활성화.</p>
-    </div>
-  </div>
-
-  <div class="statement">건강함은 구매의 명분으로 남기고,<br>재미와 문화적 화제성을 다시 브랜드의 전면으로.</div>
-  <div class="foot">제품의 장점을 다시 설명하는 것을 넘어, 오란씨 자체를 다시 화제의 중심으로.</div>
+<div class="brandfit">
+<div>
+<small>CURRENT LIMIT</small>
+<strong>기능 소구만으로는 2030과의 접점이 약함</strong>
+<p>가족·자녀 대상의 비타민C·저칼로리 메시지만으로는 메인 탄산 소비층에게 강한 문화적 선택 이유를 만들기 어려움</p>
+</div>
+<div>
+<small>NEW TARGET</small>
+<strong>2030의 자발적 ‘Play Culture’ 구축</strong>
+<p>패키지 리뉴얼과 함께 젊은 소비자가 오란씨를 발견하고, 공유하고, 직접 가지고 놀 수 있는 접점 설계</p>
+</div>
+<div>
+<small>NEW INTERPRETATION</small>
+<strong>Retro Repeat가 아닌 Heritage Reboot</strong>
+<p>6년간 이어온 레트로의 단순 반복을 끊고, 55년 역사와 CM송을 지금의 음악·밈·콘텐츠 문법으로 재활성화</p>
+</div>
+</div>
+<div class="statement">건강함은 구매의 명분으로 남기고,<br/>재미와 문화적 화제성을 다시 브랜드의 전면으로</div>
+<div class="foot">제품의 장점을 다시 설명하는 것을 넘어, 오란씨 자체를 다시 화제의 중심으로</div>
 </section>
-
-
 <section class="panel">
-  <div class="index">07 · EXECUTION OPTIONS</div>
-  <h2 class="split-head"><span>핵심 아이디어는 하나.</span><span>예산과 리드타임에 따라 실행 규모만 두 단계로 나눕니다.</span></h2>
-
-  <p class="lead">
-    캠페인의 중심은 ‘오란씨의 헤리티지 × 피철인 × CM송’입니다.
+<div class="index">07 · EXECUTION OPTIONS</div>
+<h2 class="split-head"><span>핵심 아이디어는 하나</span><span>예산과 리드타임에 따라 실행 규모만 두 단계로 나눕니다</span></h2>
+<p class="lead">
+    캠페인의 중심은 ‘오란씨의 헤리티지 × 피철인 × CM송’입니다
     브랜드 리프레시를 크게 가져가는 풀 스케일 캠페인과,
-    핵심 음원 IP 하나를 중심으로 빠르게 확산시키는 Lean Activation 두 가지로 단순화합니다.
+    핵심 음원 IP 하나를 중심으로 빠르게 확산시키는 Lean Activation 두 가지로 단순화합니다
   </p>
-
-  <div class="options3">
-    <div class="option-card">
-      <small>OPTION A · BRAND CAMPAIGN</small>
-      <strong>리브랜딩 모멘텀을 극대화하는 메인 앵커</strong>
-      <p>Hero Film + CM Song + Short-form + 온·오프라인 모델 활용. 오란씨 브랜드 자체의 새로운 이미지를 만드는 풀 스케일 캠페인.</p>
-    </div>
-    <div class="option-card">
-      <small>OPTION B · LEAN IP ACTIVATION</small>
-      <strong>핵심 음원 IP 1편으로 밈 확산을 노리는 진입점</strong>
-      <p>피철인 × 오란씨 CM송을 중심으로 숏폼·리믹스·챌린지를 빠르게 확장. 예산과 일정 부담은 낮추되 아이디어 핵심은 유지.</p>
-    </div>
-  </div>
-
-  <div class="internal-note">
+<div class="options3">
+<div class="option-card">
+<small>OPTION A · BRAND CAMPAIGN</small>
+<strong>리브랜딩 모멘텀을 극대화하는 메인 앵커</strong>
+<p>Hero Film + CM Song + Short-form + 온·오프라인 모델 활용 오란씨 브랜드 자체의 새로운 이미지를 만드는 풀 스케일 캠페인</p>
+</div>
+<div class="option-card">
+<small>OPTION B · LEAN IP ACTIVATION</small>
+<strong>핵심 음원 IP 1편으로 밈 확산을 노리는 진입점</strong>
+<p>피철인 × 오란씨 CM송을 중심으로 숏폼·리믹스·챌린지를 빠르게 확장 예산과 일정 부담은 낮추되 아이디어 핵심은 유지</p>
+</div>
+</div>
+<div class="internal-note">
     방향성에 합의하면 PA가 PLEDIS와 실제 가능한 Talent / IP 활용 범위를 바로 재협의하고,
-    오란씨 요청에 맞춰 두 실행안의 상세 Treatment · Scope · Budget을 구체화.
+    오란씨 요청에 맞춰 두 실행안의 상세 Treatment · Scope · Budget을 구체화
   </div>
-
-  <div class="foot">Creative Direction remains consistent across both scopes.</div>
+<div class="foot">Creative Direction remains consistent across both scopes</div>
 </section>
-
-
 <section class="panel">
-  <div class="index">08 · NEXT STEP</div>
-  <h2>Next Step</h2>
-
-  <div class="role">
-    <div class="rolebox">
-      <small>CLIENT</small>
-      <strong>ORAN-C</strong>
-      <p>Brand brief · Business objective · Budget · Approval</p>
-    </div>
-    <div class="plus">→</div>
-    <div class="rolebox main">
-      <small>CAMPAIGN LEAD</small>
-      <strong>PLUS ALPHA AGENCY</strong>
-      <p>Campaign Strategy · Creative Development · DINO/PLEDIS Coordination · Director/Production/Music Team Assembly · PM · Launch Plan</p>
-    </div>
-  </div>
-
-  <div class="grid4">
-    <article class="card">
-      <div class="kicker">01</div>
-      <h3>Campaign Treatment</h3>
-      <p>Big Idea와 Hero / Music / Social 구조 구체화.</p>
-    </article>
-    <article class="card">
-      <div class="kicker">02</div>
-      <h3>Creative Team</h3>
-      <p>아이디어에 맞는 CD · 감독 · 프로덕션 · 음악팀 구성.</p>
-    </article>
-    <article class="card">
-      <div class="kicker">03</div>
-      <h3>Scope & Budget</h3>
-      <p>Talent / Production / Activation을 하나의 실행안으로 정리.</p>
-    </article>
-    <article class="card">
-      <div class="kicker">04</div>
-      <h3>Project Management</h3>
-      <p>브랜드와 아티스트, 제작진 사이 전체 일정·승인·실행 리드.</p>
-    </article>
-  </div>
-
-  <div class="cta">
-    <strong>9–10월 제작 Window 확보를 위해,<br>브랜드 브리프 수령 직후 PLEDIS 실무 협의 및 상세 Treatment에 착수.</strong>
-    <div class="cta-meta">
-      Campaign Treatment<br>
-      Creative Team<br>
+<div class="index">08 · NEXT STEP</div>
+<h2>Next Step</h2>
+<div class="role">
+<div class="rolebox">
+<small>CLIENT</small>
+<strong>ORAN-C</strong>
+<p>Brand brief · Business objective · Budget · Approval</p>
+</div>
+<div class="plus">→</div>
+<div class="rolebox main">
+<small>CAMPAIGN LEAD</small>
+<strong>PLUS ALPHA AGENCY</strong>
+<p>Campaign Strategy · Creative Development · DINO/PLEDIS Coordination · Director/Production/Music Team Assembly · PM · Launch Plan</p>
+</div>
+</div>
+<div class="grid4">
+<article class="card">
+<div class="kicker">01</div>
+<h3>Campaign Treatment</h3>
+<p>Big Idea와 Hero / Music / Social 구조 구체화</p>
+</article>
+<article class="card">
+<div class="kicker">02</div>
+<h3>Creative Team</h3>
+<p>아이디어에 맞는 CD · 감독 · 프로덕션 · 음악팀 구성</p>
+</article>
+<article class="card">
+<div class="kicker">03</div>
+<h3>Scope &amp; Budget</h3>
+<p>Talent / Production / Activation을 하나의 실행안으로 정리</p>
+</article>
+<article class="card">
+<div class="kicker">04</div>
+<h3>Project Management</h3>
+<p>브랜드와 아티스트, 제작진 사이 전체 일정·승인·실행 리드</p>
+</article>
+</div>
+<div class="cta">
+<strong>9–10월 제작 Window 확보를 위해,<br/>브랜드 브리프 수령 직후 PLEDIS 실무 협의 및 상세 Treatment에 착수</strong>
+<div class="cta-meta">
+      Campaign Treatment<br/>
+      Creative Team<br/>
       Detailed Scope + Budget
     </div>
-  </div>
+</div>
 </section>
-
-
 <footer class="site-footer">
-  <div class="site-footer-brand">
-    <strong>PLUS ALPHA AGENCY</strong>
-    Talent · Business · Ventures<br>
+<div class="site-footer-brand">
+<strong>PLUS ALPHA AGENCY</strong>
+    Talent · Business · Ventures<br/>
     plusalpha.agency
   </div>
-
-  <div class="site-footer-contact">
-    <strong>DaeYoung Bae · Manager</strong>
-    <a href="mailto:young@plusalpha.agency">young@plusalpha.agency</a>
-  </div>
-
-  <div class="confidential-note">
-    CONFIDENTIAL — 본 자료는 오란씨 내부 검토 목적으로 제공되며, Plus Alpha Agency의 사전 동의 없이 외부 공유·배포를 금합니다.
+<div class="site-footer-contact">
+<strong>DaeYoung Bae · Manager</strong>
+<a href="mailto:young@plusalpha.agency">young@plusalpha.agency</a>
+</div>
+<div class="confidential-note">
+    CONFIDENTIAL — 본 자료는 오란씨 내부 검토 목적으로 제공되며, Plus Alpha Agency의 사전 동의 없이 외부 공유·배포를 금합니다
   </div>
 </footer>
-
 </main>
 </body>
 </html>
