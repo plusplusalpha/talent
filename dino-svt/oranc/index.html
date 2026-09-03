@@ -300,10 +300,98 @@ h3{
   .brandfit,.options3{grid-template-columns:1fr}
 }
 
+
+.confidential-bar{
+  height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+  color:#5f5f5a;
+  text-transform:uppercase;
+}
+.confidential-mark{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.confidential-mark:before{
+  content:"";
+  width:5px;
+  height:5px;
+  background:#111;
+  display:block;
+}
+.site-footer{
+  margin-top:14px;
+  border-top:1px solid var(--line-dark);
+  padding:18px 2px 0;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:end;
+}
+.site-footer-brand{
+  font-size:9px;
+  line-height:1.65;
+  color:#555;
+}
+.site-footer-brand strong{
+  display:block;
+  font-size:10px;
+  color:#111;
+  letter-spacing:.03em;
+}
+.site-footer-contact{
+  text-align:right;
+  font-size:9px;
+  line-height:1.65;
+  color:#555;
+}
+.site-footer-contact strong{
+  display:block;
+  color:#111;
+  font-size:10px;
+}
+.confidential-note{
+  grid-column:1 / -1;
+  border-top:1px solid var(--line);
+  padding-top:11px;
+  font-size:8.5px;
+  line-height:1.55;
+  color:#777;
+  letter-spacing:.01em;
+}
+@media(max-width:820px){
+  .confidential-bar{
+    height:auto;
+    padding:9px 0;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .site-footer{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .site-footer-contact{text-align:left}
+}
+@media print{
+  .confidential-bar{display:flex}
+  .site-footer{page-break-inside:avoid}
+}
+
 </style>
 </head>
 <body>
 <main class="wrap">
+
+<div class="confidential-bar">
+  <div class="confidential-mark">CONFIDENTIAL</div>
+  <div>FOR ORAN-C INTERNAL REVIEW ONLY</div>
+</div>
 
 <header class="header">
   <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABPCAYAAACu7Yr+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAB95JREFUeAHtnY912zgMxhG/G8BdIFYnaG4DdYLrTVB3grYTNJ2gzQRVJ7h0gigTNJ2gchY43wLJAQmV5ziOJVn4SILi7z3Fav7VEfkRJAiAR4vF4pbiZ+0uoZEPR0dHzc3NzXo2m63c5+TrV03TrCmjRlEUF7e3tyX5pV6tVq8pAo6MCGQId0LhRm1YPL/knrJwDoLFUfBz/E0B4AHwRQxt9gelx5yvkh8wceM+fJIHAhFNzaK55H/WWTDdsIX+JM8x0P/9gV9OKTApWpC+1Nz43/n1PIvlKSGth2PN7fMydNvMaLqU3AG+8fXv8fHxN+4PJ5TZpKSwzJ0VCcqUBfIAj1RLFspPtqYXLJSSMjI9/USB4XZ5S4HJAnmMWJULZ1EKmij8py/lhcJThB6wskB24CzKbxZK8FE0EMFH7pbQlmzKi/S+nLNgPvJisaEJIGsxmW5SRPDzf82Pv6YAZAvSzRuZdk1lysUL4/cUGfye3lAgsgXpT+NGsoYSJQLX7nMEc/lmC9KfInVLEqP1cARz+WaBDENE8g8lCo/SwaYyXfB7CyLeLJDhnLB365QSQ9u1yx36Hekyd+/RK/A1yFgPhJvSzN0l97Lj/YpH8oLC+eplTvxnSusR7gey9ihIh2a1Wr0ERAJ7j/KNPlhxXyd04in5eus5JLudEwcPhdBANuPcgKMC/64f7lZeS9KjlPfq0+VreorV3FPx9Vq8HHydkcsXQSNhENxYc0oAFrvqxuBsNqvcrbyqep58bxwmswZxYvkgUzoXpYtGxLEk44gVlsgB0kPa4crdyFT0inQpfQ5MyS3SnVCW3DCfCQyPZn+RcSTngxTZmF61qLeDT5dvsl4sFskpi+ScsJgOkZeRmJ9RSYrw9Gr7mYsFUZ1micvXlxVJ3c37kZQbZ4u58TwS2fcoSI9mewHtplk/SBdv09ukBSKt5WE9YlYg2gteftb1M1+qSBl+7142DqewUVgTFpOeLLZ82tZDONv1SWdVtC25l1yRKQhE24uyjVVXr/YI/OC92gXCkvtw+SYvEA+73QsyhovaLUmRHd6rbRAOkxJtRXIs1gTRdu0KG5uDOwFNs+C5IlkgI+EG+o8MAdgYFPZOr1oQ0yx0REPyAkG7YXnktFZTqyRlXIhPHxDTLGiuyBQsSEFYTAkEtLDt1fFR0yxkrkjyAuHRBR0OgvaSqQEq51MPcYSA9qVguSJJCwQ0397GjEAIUM7ngA4PCf9hywgpVZS0QBDemi3MVI135XxK0qce8s1umtWQPhCXb7IC4Yf1Hm09AKHcMEAFGQZNr1pQ4T+I9VWSAmFxSIbhV8LjI+9kNKip5oiOXhEG9VyRpAQiD+f4+PgLi6MiPE8iVyMGVUr0oPWECyKtCYC2yzcZgYgXQ0pm8oP3kkzjIyFLC34uS1KG//5q5PpLOwT+Du1cEdMnTMmiTNy4rti0z6DBu1x4MoAbOArSZ2wHr/j6Qvq0uSIqU+zoBeJGg7bkT8GCeMWCkN1x8crMQxwRJnnvZATQxqAMEKPctWJ9uG1rhGfNuXxtCEQqES4Wi6GmuNj4+UdfCCGITfj9fF6tVg0ZQLucT4vi+kEW+SXpc6JVHsiHBWktgHm4s32/vr4+JSNIOR/QgKLlvRMrJNMs9f7hLGdNI8nRvP25ms1mXhwAGgCjCNS8d6B89RaVjcMskB6I5XAlVM0EJqKiCHokRg2lIhAauSJZIB1whzjjadXSkjgE7XI+LWxFVTdgURG+gkauSBbI84j5f8fiMDOtailwh3BeIVKYgZVnRueKZIHsQLw0rnp7RQZBFTMYkBg1FEiErzA2VyQL5DESAvG3FMNGjJQ+cAvTgjDUBAAY4SvMXYmjgzC9k67I2o2OX62tNbYBFlST5/IJdQLd9n6X8u+WZ3KQlZr0IZ5uw+ts7K5wLER8CGdwDj3IaYoWpC1Het6nEoclxLUbOtIgVg7dOJyCBVk7S3FJ96JoKEGc9fhJiUQtIOB+8GLoFDo1CyJiaOg+T/wX3We8JWUl9lBSFsdenMv3dMjPWLIgjXxgAazdvbyuNu6vUrUOfVA+hDNVZAB9OcSKwC3I0chTbjPdAHM+UmNwrkjeB0kDVEptcgwtD5QFYhxEpfbEORkS5ZsFYhwPtb+SY0goThaIYTxVjkyR3rkiWSC2GZ3vMFX65opkgRjG10GWKdI3VyQLxCjAnI+p0CtXJEfzGgVpPVxRuHcUGB4EPvDfiaiddYfLFTnd9z3ZghjELTBPCEcsNYcrwh5Q1JkrkgViECnnQziiqTkMrnpyR5clzgIxBtq1KxVcKC4qwrLX5ZsFYgz0xmDXcc6+QVY9adm3cZgFYgxUOR/HQQfioAFWPWl59lyRLBBDoF27HjriocBTop9z+WaBGAJVzmeDmiJEplmoA3danjtXJAvECOByPtJBfkSecHZJWNpckUdkgRjBQ1hJRXGjWvJ0F7tyRbJADFDcF6NCBiaOPhAHjdsTqQnLk1yRLBADoF27HjqeFtBNQ2F7nZcFEjluY7AkLCaOsyZ86IkgLt+HMJ4skPgpCRu1G01oSRc+Qk8EttjL9j4LJHLQrt0IQ0u6qAjMZq5IFkjE+Mj5iC20pAsfoSe0kSuSBRI36HI+UYaWdOFjx789VyQLJFJ8lPOJOLSkCx8u6btckSyQSPFUzqcmg/gIPRFkc/Z/gE6s1kSPSbMAAAAASUVORK5CYII=" alt="PA">
@@ -368,7 +456,7 @@ h3{
       <span class="ref-num">02 · 버거킹</span>
       <strong>노포 감성 × 현대 브랜드</strong>
       <p>한국형 노포의 시각 언어를 현대적인 브랜드 캠페인에 적용해 익숙함을 새롭게 소비하게 만든 사례.</p>
-      <a href="https://www.youtube.com/results?search_query=BIGBANG+BANG+BANG+BANG+80s+version" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
+      <a href="https://www.instagram.com/reel/DbRyWhrkQIp/" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
     </div>
     <div class="ref">
       <span class="ref-num">03 · 낭만부부</span>
@@ -380,7 +468,7 @@ h3{
       <span class="ref-num">04 · 빅뱅 80년대 리메이크</span>
       <strong> 강력한 음악 IP x 레트로 재해석 </strong>
       <p>〈BANG BANG BANG〉 같은 익숙한 K-POP 히트곡을 AI 를 활용하여 7080풍 사운드와 비주얼로 재구성하여 놀이를 만든 사례.</p>
-      <a href="https://www.instagram.com/reel/DbRyWhrkQIp/" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
+      <a href="https://www.youtube.com/results?search_query=BIGBANG+BANG+BANG+BANG+80s+version" target="_blank" rel="noopener">VIEW REFERENCE ↗</a>
     </div>
   </div>
 
@@ -564,6 +652,24 @@ h3{
     </div>
   </div>
 </section>
+
+
+<footer class="site-footer">
+  <div class="site-footer-brand">
+    <strong>PLUS ALPHA AGENCY</strong>
+    Talent · Business · Ventures<br>
+    plusalpha.agency
+  </div>
+
+  <div class="site-footer-contact">
+    <strong>DaeYoung Bae · Manager</strong>
+    <a href="mailto:young@plusalpha.agency">young@plusalpha.agency</a>
+  </div>
+
+  <div class="confidential-note">
+    CONFIDENTIAL — 본 자료는 오란씨 내부 검토 목적으로 제공되며, Plus Alpha Agency의 사전 동의 없이 외부 공유·배포를 금합니다.
+  </div>
+</footer>
 
 </main>
 </body>
