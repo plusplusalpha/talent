@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="TWSのプロフィール、強み、コラボレーション実績、日本での最新活動をまとめた関係者向け資料。">
+<title>TWS × JAPAN — PA</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<style>
+:root{
+  --bg:#efefec;
+  --paper:#fff;
+  --ink:#101010;
+  --muted:#6f6f6a;
+  --line:#d6d6d0;
+  --line-dark:#a9a9a3;
+  --soft:#f5f5f2;
+  --black:#111;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Pretendard",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  letter-spacing:-.01em;
+}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid #111;outline-offset:3px}
+img{display:block;max-width:100%}
+.wrap{width:min(1160px,calc(100% - 72px));margin:0 auto;padding:26px 0 84px}
+.confidential-bar{
+  height:30px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);font-size:9px;font-weight:700;
+  letter-spacing:.13em;color:#5f5f5a;text-transform:uppercase;
+}
+.confidential-mark{display:flex;align-items:center;gap:7px}
+.confidential-mark:before{content:"";width:5px;height:5px;background:#111;display:block}
+.header{
+  height:58px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line-dark);margin-bottom:28px;
+}
+.logo{width:42px;height:auto;display:block}
+.header-meta{font-size:9px;letter-spacing:.11em;color:#70706c;text-transform:uppercase}
+.panel{
+  background:var(--paper);border:1px solid var(--line);padding:64px 72px 54px;
+  margin-bottom:18px;min-height:660px;display:flex;flex-direction:column;
+}
+.panel.short{min-height:540px}
+.index{
+  display:flex;align-items:center;gap:11px;margin-bottom:44px;
+  font-size:12px;font-weight:700;letter-spacing:.15em;color:#61615d;
+}
+.index:before{content:"";width:6px;height:6px;background:#111;display:block}
+h1,h2,h3,p{margin:0}
+h1{
+  font-size:54px;line-height:1.3;letter-spacing:-.035em;font-weight:700;max-width:940px;
+}
+h2{
+  font-size:34px;line-height:1.36;letter-spacing:-.025em;font-weight:700;max-width:940px;
+}
+h3{font-size:19px;line-height:1.46;letter-spacing:-.018em;font-weight:700}
+.split-head{display:flex;flex-direction:column;gap:.72em}
+.split-head span{display:block}
+.lead{
+  margin-top:44px;max-width:880px;font-size:17px;line-height:1.88;color:#41413e;
+}
+.statement{
+  margin-top:50px;padding-top:32px;border-top:1px solid var(--line-dark);
+  font-size:29px;line-height:1.52;letter-spacing:-.028em;font-weight:700;max-width:940px;
+}
+.foot{
+  margin-top:auto;padding-top:40px;color:#8a8a84;font-size:12px;
+  line-height:1.75;letter-spacing:.025em;
+}
+.hero-visual{
+  margin-top:48px;height:380px;overflow:hidden;border:1px solid var(--line);
+  background:var(--soft);
+}
+.hero-visual img{
+  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  filter:saturate(.86) contrast(.98);
+}
+.visual-meta{
+  display:flex;justify-content:space-between;gap:24px;margin-top:14px;
+  color:#85857f;font-size:11px;line-height:1.55;letter-spacing:.045em;
+}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:52px}
+.card{background:#fff;border:1px solid var(--line);padding:26px;min-height:210px}
+.card.soft{background:var(--soft)}
+.card.dark{background:#151515;color:#fff;border-color:#151515}
+.kicker{
+  font-size:11px;font-weight:700;letter-spacing:.14em;color:#7b7b76;
+  margin-bottom:18px;text-transform:uppercase;
+}
+.card.dark .kicker{color:#aaa}
+.card p{margin-top:14px;font-size:14px;line-height:1.8;color:#50504c}
+.card.dark p{color:#d0d0ca}
+.metric{margin-top:18px;font-size:32px;font-weight:700;letter-spacing:-.025em}
+.source-link{
+  display:inline-block;margin-top:20px;font-size:11px;font-weight:700;
+  letter-spacing:.09em;line-height:1.55;text-decoration:underline;text-underline-offset:3px;
+}
+.profile-line{
+  margin-top:46px;padding:20px 0;border-top:1px solid var(--line-dark);
+  border-bottom:1px solid var(--line-dark);display:flex;gap:11px;flex-wrap:wrap;
+}
+.profile-line span{
+  border:1px solid #c8c8c2;padding:9px 12px;background:#fff;
+  font-size:12px;font-weight:700;letter-spacing:.05em;
+}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.fact{border:1px solid var(--line);padding:20px;min-height:108px}
+.fact small{display:block;font-size:10px;font-weight:700;letter-spacing:.13em;color:#777}
+.fact strong{display:block;margin-top:15px;font-size:17px;line-height:1.4}
+.spec-list{list-style:none;margin:10px 0 0;padding:0}
+.spec-list li{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.58;color:#4f4f4b}
+.spec-list li:last-child{border-bottom:0}
+.talent-links{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px;
+}
+.talent-link{
+  min-height:98px;border:1px solid var(--line);padding:18px 19px;
+  display:flex;justify-content:space-between;gap:12px;align-items:flex-end;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.talent-link:hover{background:#111;color:#fff;border-color:#111}
+.talent-link small{
+  display:block;font-size:10px;font-weight:700;letter-spacing:.13em;color:#777;
+}
+.talent-link:hover small{color:#aaa}
+.talent-link strong{display:block;margin-top:11px;font-size:13px;line-height:1.4;letter-spacing:.02em}
+.talent-link b{font-size:13px;font-weight:500;line-height:1}
+.asset-grid{
+  margin-top:52px;display:grid;grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line-dark);border-left:1px solid var(--line);
+}
+.asset{
+  padding:30px;border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);min-height:210px;
+}
+.asset small{font-size:11px;letter-spacing:.13em;color:#777;font-weight:700}
+.asset strong{display:block;font-size:20px;line-height:1.42;margin-top:18px}
+.asset p{font-size:14px;line-height:1.8;color:#555;margin-top:14px}
+.offer{
+  margin-top:44px;border-top:1px solid var(--line-dark);
+}
+.offer-row{
+  display:grid;grid-template-columns:58px 1fr 1.65fr;gap:24px;
+  padding:26px 0;border-bottom:1px solid var(--line);align-items:start;
+}
+.offer-row small{font-size:10px;letter-spacing:.12em;color:#777;font-weight:700}
+.offer-row strong{font-size:17px;line-height:1.38}
+.offer-row p{font-size:13px;line-height:1.7;color:#555}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.tag{border:1px solid var(--line);padding:6px 8px;font-size:9px;letter-spacing:.08em;color:#777}
+.flow{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.flow>div{border:1px solid var(--line);padding:20px;min-height:156px}
+.flow span{font-size:10px;letter-spacing:.12em;color:#777;font-weight:700}
+.flow strong{display:block;margin-top:12px;font-size:16px;line-height:1.38}
+.flow p{margin-top:12px;font-size:12.5px;line-height:1.62;color:#555}
+.case-grid{
+  margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+}
+.case-card{
+  border:1px solid var(--line);padding:26px;min-height:225px;
+  display:flex;flex-direction:column;
+}
+.case-card:nth-child(2n){background:var(--soft)}
+.case-card small{font-size:10px;letter-spacing:.13em;color:#777;font-weight:700}
+.case-card strong{display:block;margin-top:16px;font-size:19px;line-height:1.45}
+.case-card p{margin-top:14px;font-size:14px;line-height:1.8;color:#555}
+.case-card .source-link{margin-top:auto;padding-top:18px}
+.role{
+  margin-top:26px;display:grid;grid-template-columns:1fr 50px 1.35fr;
+  gap:8px;align-items:center;
+}
+.rolebox{border:1px solid var(--line);padding:15px;min-height:112px}
+.rolebox.main{background:#181818;color:#fff;border-color:#181818}
+.rolebox small{font-size:8px;letter-spacing:.12em;color:#777;font-weight:700}
+.rolebox.main small{color:#aaa}
+.rolebox strong{display:block;margin-top:10px;font-size:16px}
+.rolebox p{margin-top:8px;font-size:9.5px;line-height:1.5;color:#555}
+.rolebox.main p{color:#ccc}
+.plus{display:flex;align-items:center;justify-content:center;font-size:16px;color:#777}
+.cta{
+  margin-top:auto;border-top:1px solid var(--line-dark);padding-top:22px;
+  display:flex;justify-content:space-between;gap:22px;align-items:flex-end;
+}
+.cta strong{font-size:16px;line-height:1.33;letter-spacing:-.04em;max-width:670px}
+.cta-meta{font-size:9px;line-height:1.65;color:#777;text-align:right}
+.site-footer{
+  margin-top:18px;border-top:1px solid var(--line-dark);padding:22px 4px 0;
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;
+}
+.site-footer-brand,.site-footer-contact{font-size:10.5px;line-height:1.75;color:#555}
+.site-footer-brand strong,.site-footer-contact strong{
+  display:block;font-size:11.5px;color:#111;letter-spacing:.04em;
+}
+.site-footer-contact{text-align:right}
+.confidential-note{
+  grid-column:1/-1;border-top:1px solid var(--line);padding-top:13px;
+  font-size:9.5px;line-height:1.7;color:#777;letter-spacing:.015em;
+}
+@media(max-width:820px){
+  body{background:#f1f1ee}
+  .wrap{width:100%;margin:0;padding:0 0 38px}
+  .confidential-bar{height:auto;min-height:30px;padding:11px 24px;font-size:8px;line-height:1.5}
+  .header{height:54px;padding:0 24px;margin-bottom:14px}
+  .logo{width:36px}
+  .header-meta{font-size:8px;letter-spacing:.08em}
+  .panel,.panel.short{
+    min-height:auto;padding:48px 28px 44px;margin-bottom:14px;border-left:0;border-right:0;
+  }
+  .index{margin-bottom:36px;font-size:11px;gap:9px;line-height:1.5}
+  .index:before{width:5px;height:5px}
+  h1{font-size:37px;line-height:1.44;letter-spacing:-.025em;max-width:none}
+  h2{font-size:28px;line-height:1.5;letter-spacing:-.02em;max-width:none}
+  .split-head{gap:.72em}
+  h3{font-size:18px;line-height:1.5}
+  .lead{margin-top:34px;max-width:none;font-size:16px;line-height:1.9}
+  .statement{margin-top:42px;padding-top:28px;font-size:23px;line-height:1.62}
+  .hero-visual{height:310px;margin-top:38px}
+  .visual-meta{font-size:10.5px;line-height:1.65}
+  .grid2,.grid3,.grid4,.asset-grid,.case-grid{grid-template-columns:1fr;gap:14px;margin-top:42px}
+  .asset-grid{gap:0;border-top:0;border-left:0}
+  .asset{min-height:0;border:1px solid var(--line);margin-bottom:10px;padding:24px}
+  .card{min-height:0;padding:24px}
+  .card p{margin-top:14px;font-size:14px;line-height:1.82}
+  .kicker{font-size:10px;margin-bottom:16px}
+  .profile-line{margin-top:38px;padding:18px 0;gap:9px}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .fact{min-height:78px}
+  .talent-links{grid-template-columns:repeat(2,1fr);gap:8px}
+  .talent-link{min-height:90px;padding:16px}
+  .offer{margin-top:36px}
+  .offer-row{grid-template-columns:40px 1fr;gap:14px;padding:22px 0}
+  .offer-row p{grid-column:2;margin-top:4px}
+  .flow{grid-template-columns:1fr;gap:12px;margin-top:36px}
+  .flow>div{min-height:0;padding:22px}
+  .case-card{min-height:0;padding:24px}
+  .role{grid-template-columns:1fr;margin-top:28px;gap:10px}
+  .plus{display:none}
+  .rolebox{min-height:0;padding:16px}
+  .cta{margin-top:38px;padding-top:24px;align-items:flex-start;flex-direction:column}
+  .cta strong{font-size:14px;line-height:1.52}
+  .cta-meta{text-align:left}
+  .site-footer{margin:30px 28px 0;padding-top:26px;grid-template-columns:1fr;gap:20px;align-items:start}
+  .site-footer-contact{text-align:left}
+  .confidential-note{font-size:9px;padding-top:15px;line-height:1.75}
+}
+@media print{
+  body{background:#fff}
+  .wrap{width:100%;padding:0}
+  .header{display:none}
+  .panel{border:0;margin:0;min-height:100vh;page-break-after:always}
+  .confidential-bar{display:flex}
+  .site-footer{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="confidential-bar">
+    <div class="confidential-mark">CONFIDENTIAL</div>
+    <div>関係者検討用・非公開資料</div>
+  </div>
+  <header class="header">
+    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABPCAYAAACu7Yr+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAB95JREFUeAHtnY912zgMxhG/G8BdIFYnaG4DdYLrTVB3grYTNJ2gzQRVJ7h0gigTNJ2gchY43wLJAQmV5ziOJVn4SILi7z3Fav7VEfkRJAiAR4vF4pbiZ+0uoZEPR0dHzc3NzXo2m63c5+TrV03TrCmjRlEUF7e3tyX5pV6tVq8pAo6MCGQId0LhRm1YPL/knrJwDoLFUfBz/E0B4AHwRQxt9gelx5yvkh8wceM+fJIHAhFNzaK55H/WWTDdsIX+JM8x0P/9gV9OKTApWpC+1Nz43/n1PIvlKSGth2PN7fMydNvMaLqU3AG+8fXv8fHxN+4PJ5TZpKSwzJ0VCcqUBfIAj1RLFspPtqYXLJSSMjI9/USB4XZ5S4HJAnmMWJULZ1EKmij8py/lhcJThB6wskB24CzKbxZK8FE0EMFH7pbQlmzKi/S+nLNgPvJisaEJIGsxmW5SRPDzf82Pv6YAZAvSzRuZdk1lysUL4/cUGfye3lAgsgXpT+NGsoYSJQLX7nMEc/lmC9KfInVLEqP1cARz+WaBDENE8g8lCo/SwaYyXfB7CyLeLJDhnLB365QSQ9u1yx36Hekyd+/RK/A1yFgPhJvSzN0l97Lj/YpH8oLC+eplTvxnSusR7gey9ihIh2a1Wr0ERAJ7j/KNPlhxXyd04in5eus5JLudEwcPhdBANuPcgKMC/64f7lZeS9KjlPfq0+VreorV3FPx9Vq8HHydkcsXQSNhENxYc0oAFrvqxuBsNqvcrbyqep58bxwmswZxYvkgUzoXpYtGxLEk44gVlsgB0kPa4crdyFT0inQpfQ5MyS3SnVCW3DCfCQyPZn+RcSTngxTZmF61qLeDT5dvsl4sFskpi+ScsJgOkZeRmJ9RSYrw9Gr7mYsFUZ1micvXlxVJ3c37kZQbZ4u58TwS2fcoSI9mewHtplk/SBdv09ukBSKt5WE9YlYg2gteftb1M1+qSBl+7142DqewUVgTFpOeLLZ82tZDONv1SWdVtC25l1yRKQhE24uyjVVXr/YI/OC92gXCkvtw+SYvEA+73QsyhovaLUmRHd6rbRAOkxJtRXIs1gTRdu0KG5uDOwFNs+C5IlkgI+EG+o8MAdgYFPZOr1oQ0yx0REPyAkG7YXnktFZTqyRlXIhPHxDTLGiuyBQsSEFYTAkEtLDt1fFR0yxkrkjyAuHRBR0OgvaSqQEq51MPcYSA9qVguSJJCwQ0397GjEAIUM7ngA4PCf9hywgpVZS0QBDemi3MVI135XxK0qce8s1umtWQPhCXb7IC4Yf1Hm09AKHcMEAFGQZNr1pQ4T+I9VWSAmFxSIbhV8LjI+9kNKip5oiOXhEG9VyRpAQiD+f4+PgLi6MiPE8iVyMGVUr0oPWECyKtCYC2yzcZgYgXQ0pm8oP3kkzjIyFLC34uS1KG//5q5PpLOwT+Du1cEdMnTMmiTNy4rti0z6DBu1x4MoAbOArSZ2wHr/j6Qvq0uSIqU+zoBeJGg7bkT8GCeMWCkN1x8crMQxwRJnnvZATQxqAMEKPctWJ9uG1rhGfNuXxtCEQqES4Wi6GmuNj4+UdfCCGITfj9fF6tVg0ZQLucT4vi+kEW+SXpc6JVHsiHBWktgHm4s32/vr4+JSNIOR/QgKLlvRMrJNMs9f7hLGdNI8nRvP25ms1mXhwAGgCjCNS8d6B89RaVjcMskB6I5XAlVM0EJqKiCHokRg2lIhAauSJZIB1whzjjadXSkjgE7XI+LWxFVTdgURG+gkauSBbI84j5f8fiMDOtailwh3BeIVKYgZVnRueKZIHsQLw0rnp7RQZBFTMYkBg1FEiErzA2VyQL5DESAvG3FMNGjJQ+cAvTgjDUBAAY4SvMXYmjgzC9k67I2o2OX62tNbYBFlST5/IJdQLd9n6X8u+WZ3KQlZr0IZ5uw+ts7K5wLER8CGdwDj3IaYoWpC1Het6nEoclxLUbOtIgVg7dOJyCBVk7S3FJ96JoKEGc9fhJiUQtIOB+8GLoFDo1CyJiaOg+T/wX3We8JWUl9lBSFsdenMv3dMjPWLIgjXxgAazdvbyuNu6vUrUOfVA+hDNVZAB9OcSKwC3I0chTbjPdAHM+UmNwrkjeB0kDVEptcgwtD5QFYhxEpfbEORkS5ZsFYhwPtb+SY0goThaIYTxVjkyR3rkiWSC2GZ3vMFX65opkgRjG10GWKdI3VyQLxCjAnI+p0CtXJEfzGgVpPVxRuHcUGB4EPvDfiaiddYfLFTnd9z3ZghjELTBPCEcsNYcrwh5Q1JkrkgViECnnQziiqTkMrnpyR5clzgIxBtq1KxVcKC4qwrLX5ZsFYgz0xmDXcc6+QVY9adm3cZgFYgxUOR/HQQfioAFWPWl59lyRLBBDoF27HjriocBTop9z+WaBGAJVzmeDmiJEplmoA3danjtXJAvECOByPtJBfkSecHZJWNpckUdkgRjBQ1hJRXGjWvJ0F7tyRbJADFDcF6NCBiaOPhAHjdsTqQnLk1yRLBADoF27HjqeFtBNQ2F7nZcFEjluY7AkLCaOsyZ86IkgLt+HMJ4skPgpCRu1G01oSRc+Qk8EttjL9j4LJHLQrt0IQ0u6qAjMZq5IFkjE+Mj5iC20pAsfoSe0kSuSBRI36HI+UYaWdOFjx789VyQLJFJ8lPOJOLSkCx8u6btckSyQSPFUzqcmg/gIPRFkc/Z/gE6s1kSPSbMAAAAASUVORK5CYII=" alt="PA">
+    <div class="header-meta">TWS · JAPAN PROFILE · SEP 2026</div>
+  </header>
+
+  <section class="panel">
+    <div class="index">ARTIST PROFILE</div>
+    <h1 class="split-head">
+      <span>TWS — 青春の一瞬を、</span>
+      <span>誰もが共感できる物語へ。</span>
+    </h1>
+    <p class="lead">TWSは、6人それぞれの個性と自然な関係性を通じて、友情、成長、日常の高揚感を描くグループです。独自の「Boyhood Pop」は、音楽、パフォーマンス、ビジュアルを一つの世界観として結び、日本でも確かな広がりを見せています。</p>
+    <div class="statement">明るく、清潔感があり、親しみやすい。<br>それでいて、6人分の表情と物語を持つ存在。</div>
+    <div class="foot">PA · TWS Japan Profile</div>
+  </section>
+
+  <section class="panel">
+    <div class="index">01 · THE TALENT</div>
+    <h2 class="split-head">
+      <span>6人それぞれの個性。</span>
+      <span>一つにまとまった、明確で記憶に残るアイデンティティ。</span>
+    </h2>
+    <div class="hero-visual">
+      <img src="https://image.weversejapan.com/official/live/tws/contents/MainImg/e5301e5dcfc64bd5866242ddca253294.jpg" alt="TWS公式グループ写真" referrerpolicy="no-referrer">
+    </div>
+    <div class="visual-meta"><span>TWS · 日本公式ビジュアル</span><span>PLEDIS ENTERTAINMENT / TWS JAPAN</span></div>
+    <div class="profile-line">
+      <span>SHINYU</span><span>DOHOON</span><span>YOUNGJAE</span><span>HANJIN</span><span>JIHOON</span><span>KYUNGMIN</span>
+    </div>
+    <div class="facts">
+      <div class="fact"><small>GROUP</small><strong>6 MEMBERS</strong></div>
+      <div class="fact"><small>KOREA DEBUT</small><strong>2024.01.22</strong></div>
+      <div class="fact"><small>JAPAN DEBUT</small><strong>2025.07.02</strong></div>
+      <div class="fact"><small>MANAGEMENT</small><strong>PLEDIS</strong></div>
+    </div>
+    <nav class="talent-links" aria-label="TWS公式チャンネル">
+      <a class="talent-link" href="https://tws-official.jp/profile" target="_blank" rel="noreferrer"><span><small>OFFICIAL PROFILE</small><strong>公式プロフィール</strong></span><b aria-hidden="true">↗</b></a>
+      <a class="talent-link" href="https://www.instagram.com/tws_pledis/" target="_blank" rel="noreferrer"><span><small>INSTAGRAM</small><strong>@tws_pledis</strong></span><b aria-hidden="true">↗</b></a>
+      <a class="talent-link" href="https://www.youtube.com/@TWS_PLEDIS" target="_blank" rel="noreferrer"><span><small>YOUTUBE</small><strong>TWS</strong></span><b aria-hidden="true">↗</b></a>
+      <a class="talent-link" href="https://open.spotify.com/artist/4GgBKgxhc649frZDHcXIEz" target="_blank" rel="noreferrer"><span><small>SPOTIFY</small><strong>Listen to TWS</strong></span><b aria-hidden="true">↗</b></a>
+      <a class="talent-link" href="https://www.tiktok.com/@tws_pledis" target="_blank" rel="noreferrer"><span><small>TIKTOK</small><strong>@tws_pledis</strong></span><b aria-hidden="true">↗</b></a>
+    </nav>
+    <div class="foot">TWS = TWENTY FOUR SEVEN WITH US · すべての瞬間を共にするという意味</div>
+  </section>
+
+  <section class="panel">
+    <div class="index">02 · DISTINCTIVE STRENGTHS</div>
+    <h2 class="split-head">
+      <span>作品、メンバー、ステージが</span>
+      <span>繰り返し証明してきた4つの強み。</span>
+    </h2>
+    <div class="asset-grid">
+      <div class="asset"><small>01 · BOYHOOD POP</small><strong>日常を、記憶に残る青春へ</strong><p>初対面の緊張、友情、成長。誰もが知る感情を「plot twist」をはじめとする明るく現代的なポップへ転換。</p></div>
+      <div class="asset"><small>02 · SIX CHARACTERS</small><strong>6人の個性、一つの関係性</strong><p>異なる声、表情、ムードを持つ6人。個々の魅力と、自然な会話やケミストリーが同時に成立。</p></div>
+      <div class="asset"><small>03 · FRESHNESS WITH RANGE</small><strong>清潔感を軸にした振れ幅</strong><p>スクールルックの親しみやすさから、端正なテーラリング、ストリート、スポーティーまで自然に変化。</p></div>
+      <div class="asset"><small>04 · PERFORMANCE THAT TRAVELS</small><strong>場所を選ばないパフォーマンス</strong><p>完成度の高い群舞と軽快なリズム。短尺映像、フェス、アリーナのいずれでも伝わる身体性。</p></div>
+    </div>
+    <div class="statement">核となるイメージは明確。<br>そのまま、表現の幅を広げられるチーム。</div>
+    <div class="foot">Music · Character · Style · Performance</div>
+  </section>
+
+  <section class="panel">
+    <div class="index">03 · SELECTED COLLABORATIONS</div>
+    <h2 class="split-head">
+      <span>ラグジュアリー、ファッション、F&amp;B、リテール、アニメ。</span>
+      <span>すでに広い文脈で選ばれてきた実績。</span>
+    </h2>
+    <div class="case-grid">
+      <article class="case-card"><small>CELINE · 2024</small><strong>Brand Ambassadors</strong><p>青春の清潔感を、ラグジュアリーとエディトリアルの文脈へ拡張。</p><a class="source-link" href="https://www.instagram.com/p/DCqWPaUSTEj/?hl=en" target="_blank" rel="noreferrer">公式発表 ↗</a></article>
+      <article class="case-card"><small>MLB KOREA · 2026</small><strong>TURN UP SUMMER / MOVE LIGHT</strong><p>群舞とチームのエネルギーを、フェスティバルとスポーティーなスタイルで表現。</p><a class="source-link" href="https://www.mlb-korea.com/display/promotions/collection/1904" target="_blank" rel="noreferrer">公式ページ ↗</a></article>
+      <article class="case-card"><small>TWIX · 2026</small><strong>Korea’s First Brand Ambassador</strong><p>「2つだから、TWIX」を軸に、メンバー同士の軽快な掛け合いと親しみやすさを活用。</p></article>
+      <article class="case-card"><small>WACKY WILLY · 2025</small><strong>KEEP GROWING, BUDDY!</strong><p>友情と成長を、ストリートファッションの若く遊び心ある世界観へ接続。</p></article>
+      <article class="case-card"><small>SHINSEGAE DUTY FREE · 2024</small><strong>PLAY WITH US / TRAVEL WITH US</strong><p>音楽、映像、旅、リテールを横断し、明るいグループケミストリーを展開。</p></article>
+      <article class="case-card"><small>TV ANIME · 2025</small><strong>BLOOM (feat. Ayumu Imazu)</strong><p>TVアニメ『ブスに花束を。』のオープニングテーマ。日本オリジナル楽曲によるIP接点。</p><a class="source-link" href="https://busunihanatabawo.com/" target="_blank" rel="noreferrer">作品公式 ↗</a></article>
+    </div>
+    <div class="foot">代表事例のみ掲載 · CELINE / MLB KOREA / TWIX / WACKY WILLY / SHINSEGAE DUTY FREE / TV ANIME</div>
+  </section>
+
+  <section class="panel">
+    <div class="index">04 · JAPAN NOW</div>
+    <h2 class="split-head">
+      <span>音楽リリース、街、フェス、アリーナ。</span>
+      <span>2026年、日本での活動が立体的に拡大。</span>
+    </h2>
+    <div class="grid4">
+      <article class="card dark"><div class="kicker">MUSIC · AUG 2026</div><h3>SODA SODA</h3><div class="metric">No.1 × 2</div><p>Billboard JAPAN Hot 100で日本シングル2作連続1位。25万枚突破、プラチナ認定。</p><a class="source-link" href="https://tws-official.jp/news/f9c2ddf03747" target="_blank" rel="noreferrer">公式発表 ↗</a></article>
+      <article class="card soft"><div class="kicker">LIVE · AUG–SEP 2026</div><h3>24/7:FOR:YOU IN JAPAN</h3><div class="metric">3都市 / 8公演</div><p>福岡、兵庫、神奈川。Kアリーナ横浜まで続いた日本アリーナツアー。</p><a class="source-link" href="https://www.hybejapan.events/tws" target="_blank" rel="noreferrer">公演情報 ↗</a></article>
+      <article class="card"><div class="kicker">CITY · JUL–AUG 2026</div><h3>SHIBUYA109 × TWS</h3><div class="metric">3 CITIES</div><p>東京・大阪・福岡でポップアップ。渋谷ではSUMMER SALE、Photoism、街歩き型スタンプラリーも展開。</p><a class="source-link" href="https://tws-official.jp/news/83ad010dffad" target="_blank" rel="noreferrer">公式発表 ↗</a></article>
+      <article class="card soft"><div class="kicker">FESTIVAL &amp; MEDIA · 2026</div><h3>SUMMER SONIC / めざましライブ</h3><div class="metric">LIVE + VR</div><p>大型フェス、地上波連動ライブ、初のVRコンサート「RUSH ROAD」まで活動領域を拡張。</p><a class="source-link" href="https://tws-official.jp/schedule?cateid=11" target="_blank" rel="noreferrer">公式スケジュール ↗</a></article>
+    </div>
+    <div class="statement">関心がチャートだけに留まらず、<br>街と会場へ広がっている現在進行形のモメンタム。</div>
+    <div class="foot">更新基準 2026.09.15 · 公開情報に基づく代表活動</div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer-brand"><strong>PA · PLUS ALPHA AGENCY</strong>Talent · Business · Ventures</div>
+    <div class="site-footer-contact"><strong>Young Bae · Manager</strong>young@plusalpha.agency</div>
+    <div class="confidential-note">CONFIDENTIAL — 本資料は関係者による非公開の検討を目的としています。無断転載、配布、公開はお控えください。</div>
+  </footer>
+</main>
+</body>
+</html>
