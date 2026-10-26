@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon Sujin in JKT</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #6f6f6f;
+      --line: #dcdcdc;
+      --soft: #f6f6f4;
+      --paper: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #ececea;
+      color: var(--ink);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.58;
+      letter-spacing: -0.012em;
+    }
+
+    main {
+      width: min(100% - 32px, 980px);
+      margin: 28px auto;
+      padding: 48px 52px 56px;
+      background: var(--paper);
+      border: 1px solid #ddd;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .05);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 74px;
+      height: auto;
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.18;
+      letter-spacing: -.035em;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .rule {
+      height: 1px;
+      margin: 30px 0;
+      background: var(--ink);
+    }
+
+    h2 {
+      margin: 38px 0 14px;
+      font-size: 17px;
+      line-height: 1.3;
+      letter-spacing: -.025em;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 13px;
+    }
+
+    p { margin: 0 0 10px; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 20px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .event-item {
+      min-height: 88px;
+      padding: 15px 14px 15px 0;
+    }
+
+    .event-item + .event-item {
+      padding-left: 14px;
+      border-left: 1px solid var(--line);
+    }
+
+    .event-item span {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .event-item strong {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .sales {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 24px;
+      align-items: end;
+      margin-top: 15px;
+      padding: 20px 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .sales-number {
+      font-size: 38px;
+      font-weight: 760;
+      line-height: 1;
+      letter-spacing: -.045em;
+    }
+
+    .sales-number small {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 550;
+      letter-spacing: -.02em;
+    }
+
+    .progress {
+      height: 6px;
+      margin-top: 13px;
+      overflow: hidden;
+      background: #dfdfdc;
+    }
+
+    .progress > div {
+      width: 88%;
+      height: 100%;
+      background: #5f6368;
+    }
+
+    .sales-copy {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .run-of-show {
+      margin-top: 18px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .run-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .run-head h2 {
+      margin: 0;
+      font-size: 13px;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    .supporting-dj {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .supporting-dj a { font-weight: 700; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 28px;
+      padding: 10px 0;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid #ededeb;
+      font-size: 11.5px;
+    }
+
+    .timeline-item:nth-last-child(-n+2) { border-bottom: 0; }
+
+    .timeline-item time {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      font-weight: 650;
+    }
+
+    .finance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 14px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .finance-item {
+      padding: 17px;
+      background: var(--paper);
+    }
+
+    .finance-item span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .finance-item strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .finance-item small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .money {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted #8a8a8a;
+      cursor: help;
+    }
+
+    .money::after {
+      position: absolute;
+      z-index: 10;
+      left: 50%;
+      bottom: calc(100% + 8px);
+      padding: 6px 8px;
+      border-radius: 3px;
+      background: #111;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+      content: attr(data-krw);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 4px);
+      transition: opacity .15s ease, transform .15s ease;
+    }
+
+    .money:hover::after,
+    .money:focus::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .summary-item {
+      padding: 18px 16px 18px 0;
+    }
+
+    .summary-item + .summary-item {
+      padding-left: 16px;
+      border-left: 1px solid var(--line);
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 21px;
+      line-height: 1;
+    }
+
+    .summary-item span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .condition-card {
+      padding: 14px 16px;
+      background: var(--soft);
+      border: 1px solid #e6e6e3;
+    }
+
+    .condition-card h3 {
+      margin-bottom: 7px;
+      font-size: 12px;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .condition-list {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 4px 10px;
+      margin: 0;
+      font-size: 11.5px;
+    }
+
+    .condition-list dt {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .condition-list dd { margin: 0; }
+
+    .artist-card {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      background: #fafafa;
+    }
+
+    .artist-card h3 {
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+
+    .artist-card p {
+      margin: 0;
+      color: #444;
+      font-size: 12px;
+    }
+
+    .artist-details {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 4px 10px;
+      margin: 0;
+      font-size: 11.5px;
+    }
+
+    .artist-details dt {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .artist-details dd { margin: 0; }
+
+    ul {
+      margin: 7px 0 0;
+      padding-left: 18px;
+    }
+
+    li + li { margin-top: 3px; }
+
+    .note {
+      margin-top: 12px;
+      padding-left: 12px;
+      border-left: 2px solid var(--ink);
+      color: #454545;
+      font-size: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 12.5px;
+    }
+
+    th {
+      padding: 9px 9px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 12px 9px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th:first-child,
+    td:first-child { padding-left: 0; }
+
+    th:last-child,
+    td:last-child { padding-right: 0; }
+
+    a {
+      color: var(--ink);
+      font-weight: 650;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .handle,
+    .subtle {
+      color: var(--muted);
+      font-size: 11.5px;
+    }
+
+    .priority {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      min-width: 38px;
+      min-height: 20px;
+      padding: 2px 8px;
+      border: 1px solid #b8dfc5;
+      border-radius: 999px;
+      background: #eaf7ee;
+      color: #287044;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .02em;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .message {
+      padding: 20px 22px;
+      background: var(--soft);
+      border: 1px solid #dededb;
+      white-space: pre-line;
+    }
+
+    .recommendation {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .recommendation:first-of-type { border-top: 1px solid var(--ink); }
+    .recommendation:last-of-type { border-bottom-color: var(--ink); }
+    .recommendation strong { font-size: 12px; }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    @media (max-width: 720px) {
+      body { background: #fff; }
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 28px 20px 40px;
+        border: 0;
+        box-shadow: none;
+      }
+      h1 { font-size: 23px; }
+      .summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .summary-item + .summary-item {
+        padding-left: 10px;
+        border-left: 1px solid var(--line);
+      }
+      .summary-item { padding: 12px 8px 12px 0; }
+      .summary-item strong { font-size: 17px; }
+      .summary-item span { font-size: 10px; }
+      .conditions-grid { grid-template-columns: 1fr; }
+      .condition-card { padding: 13px 14px; }
+      .artist-card { grid-template-columns: 1fr; gap: 12px; padding: 14px; }
+      .event-grid { grid-template-columns: 1fr 1fr; }
+      .event-item:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+      .event-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .sales { grid-template-columns: 1fr; gap: 12px; }
+      .sales-copy { text-align: left; }
+      .run-head { align-items: flex-start; flex-direction: column; gap: 2px; }
+      .timeline { grid-template-columns: 1fr; }
+      .timeline-item:nth-last-child(-n+2) { border-bottom: 1px solid #ededeb; }
+      .timeline-item:last-child { border-bottom: 0; }
+      .finance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .finance-item { padding: 13px 11px; }
+      .finance-item strong { font-size: 14px; }
+      .finance-item span { font-size: 9px; }
+      .finance-item small { font-size: 9.5px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { display: none; }
+      tr {
+        margin-bottom: 10px;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: #fafafa;
+      }
+      td {
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 8px;
+        padding: 4px 0;
+        border: 0;
+      }
+      td::before {
+        display: inline;
+        margin: 0;
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        content: attr(data-label);
+      }
+      td:first-child {
+        display: block;
+        padding: 0 0 8px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 5px;
+      }
+      td:first-child::before { display: none; }
+      td:first-child a { font-size: 14px; }
+      .recommendation { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        border: 0;
+        box-shadow: none;
+      }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img class="brand-logo" src="PA_logo.png" alt="PA" />
+      <p class="eyebrow">Showcase Overview</p>
+      <h1>Moon Sujin in JKT</h1>
+      <div class="event-grid" aria-label="Showcase information">
+        <div class="event-item"><span>Artist</span><strong>MOON SUJIN<br />× GANGGA</strong></div>
+        <div class="event-item"><span>Date</span><strong>2026년 11월 1일<br />일요일</strong></div>
+        <div class="event-item"><span>Time</span><strong>오후 6:30 입장<br />오후 7:00 공연</strong></div>
+        <div class="event-item"><span>Venue</span><strong>Krapela<br />Jakarta</strong></div>
+      </div>
+      <section class="run-of-show" aria-label="Run of show">
+        <div class="run-head">
+          <h2>Run of Show</h2>
+          <div class="supporting-dj">Supporting DJ · <a href="https://www.instagram.com/sandweej/" target="_blank">@sandweej ↗</a></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><time>18:30</time><span>Door</span></div>
+          <div class="timeline-item"><time>19:00</time><span>Opening</span></div>
+          <div class="timeline-item"><time>19:05</time><span>GANGGA Set</span></div>
+          <div class="timeline-item"><time>19:30</time><span>GANGGA × Sujin — Blue Jeans</span></div>
+          <div class="timeline-item"><time>19:35</time><span>Sujin × GANGGA — patience</span></div>
+          <div class="timeline-item"><time>19:40</time><span>Sujin Set</span></div>
+          <div class="timeline-item"><time>20:25</time><span>Encore</span></div>
+          <div class="timeline-item"><time>20:30–22:00</time><span>After DJ / Bar</span></div>
+        </div>
+      </section>
+    </header>
+
+    <section>
+      <h2>Ticket Sales</h2>
+      <div class="sales">
+        <div>
+          <div class="sales-number">176 <small>/ 200매</small></div>
+          <div class="progress" aria-label="88% sold"><div></div></div>
+        </div>
+        <div class="sales-copy"><strong style="color:#111">88% 판매</strong><br />잔여 24매<br />10월 26일 기준</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Costs &amp; Profit</h2>
+      <div class="finance-grid">
+        <div class="finance-item"><span>티켓 가격</span><strong><span class="money" tabindex="0" data-krw="약 ₩10,950">IDR 150,000</span></strong><small>1매 기준</small></div>
+        <div class="finance-item"><span>베뉴 대관료</span><strong><span class="money" tabindex="0" data-krw="약 ₩1,095,000">IDR 15,000,000</span></strong><small>Krapela 대관</small></div>
+        <div class="finance-item"><span>현재 티켓 매출</span><strong><span class="money" tabindex="0" data-krw="약 ₩1,927,200">IDR 26,400,000</span></strong><small>176매 × IDR 150,000</small></div>
+        <div class="finance-item"><span>현재 이익</span><strong><span class="money" tabindex="0" data-krw="약 ₩832,200">IDR 11,400,000</span></strong><small>현재 매출 − 대관료</small></div>
+        <div class="finance-item"><span>손익분기</span><strong>100매</strong><small>대관료 기준</small></div>
+        <div class="finance-item"><span>매진 시 예상 이익</span><strong><span class="money" tabindex="0" data-krw="약 ₩1,095,000">IDR 15,000,000</span></strong><small><span class="money" tabindex="0" data-krw="약 ₩2,190,000">IDR 30,000,000</span> 매출 기준</small></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Media &amp; Creators</h2>
+      <section class="summary-grid" aria-label="Summary">
+        <div class="summary-item"><strong>3</strong><span>인플루언서</span></div>
+        <div class="summary-item"><strong>11</strong><span>미디어 아울렛</span></div>
+        <div class="summary-item"><strong>30</strong><span>총 초대 인원</span></div>
+      </section>
+      <div class="conditions-grid">
+        <article class="condition-card">
+          <h3>Influencer</h3>
+          <dl class="condition-list">
+            <dt>사전</dt><dd>메인 포스터 스토리 1회</dd>
+            <dt>공연 당일</dt><dd>현장 스토리 2회</dd>
+            <dt>초대</dt><dd>각 2인</dd>
+            <dt>콘텐츠</dt><dd>문수진과 짧은 협업 콘텐츠</dd>
+          </dl>
+        </article>
+        <article class="condition-card">
+          <h3>Media</h3>
+          <dl class="condition-list">
+            <dt>사전</dt><dd>메인 포스터 피드·스토리 각 1회</dd>
+            <dt>공연 당일</dt><dd>현장 스토리 2회·릴스 1회</dd>
+            <dt>초대</dt><dd>각 2인</dd>
+            <dt>콘텐츠</dt><dd>상위 5곳 틱톡 또는 10분 이내 인터뷰</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Artist Meeting</h2>
+      <article class="artist-card">
+        <div>
+          <h3><a href="https://www.instagram.com/whereisryo/" target="_blank">RYO ↗</a></h3>
+          <p>@whereisryo · AntiNRML</p>
+        </div>
+        <dl class="artist-details">
+          <dt>Profile</dt><dd>자카르타 기반 뮤지션 · Instagram 21.8K</dd>
+          <dt>Request</dt><dd>공연 참석 및 문수진과의 만남 희망</dd>
+          <dt>Purpose</dt><dd>상호 소개 및 향후 음악 협업 가능성 논의</dd>
+          <dt>Status</dt><dd>만남 일정 조율 필요</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section>
+      <h2>Influencers</h2>
+      <table>
+        <thead>
+          <tr><th style="width:23%">계정</th><th style="width:18%">팔로워</th><th style="width:31%">성격</th><th style="width:28%">콘텐츠 방향</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="계정"><a href="https://www.instagram.com/gebysrikandi/" target="_blank">Geby Srikandi ↗</a><div class="handle">@gebysrikandi</div></td>
+            <td data-label="팔로워">IG 430K<br />TikTok 832K</td>
+            <td data-label="성격">MC·대중문화·K-pop·라이프스타일형 크리에이터</td>
+            <td data-label="콘텐츠 방향">음악 리액션, 상황형 릴스, 짧은 챌린지</td>
+          </tr>
+          <tr>
+            <td data-label="계정"><a href="https://www.instagram.com/danielhermansyahh/" target="_blank">Daniel Hermansyah ↗</a><div class="handle">@danielhermansyahh</div></td>
+            <td data-label="팔로워">IG 238K<br />TikTok 211K</td>
+            <td data-label="성격">Kopi Chuseyo 공동창업자·K-pop 크리에이터·커뮤니티 운영자</td>
+            <td data-label="콘텐츠 방향">인도네시아 팬 질문, 짧은 토크형 콘텐츠</td>
+          </tr>
+          <tr>
+            <td data-label="계정"><a href="https://www.instagram.com/dinareonni/" target="_blank">Dinar Eonni ↗</a><div class="handle">@dinareonni</div></td>
+            <td data-label="팔로워">IG 67K<br />TikTok 402K</td>
+            <td data-label="성격">한–인니 통번역가·한국어 강사·문화 콘텐츠 크리에이터</td>
+            <td data-label="콘텐츠 방향">한국어·인니어 교환, 가사 표현, 짧은 문화 콘텐츠</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media</h2>
+      <table>
+        <thead>
+          <tr><th style="width:25%">매체</th><th style="width:14%">팔로워</th><th style="width:34%">성격</th><th style="width:27%">활용 방향</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/creativedisc/" target="_blank">Creative Disc ↗</a><div class="handle">@creativedisc</div></td>
+            <td data-label="팔로워">—</td>
+            <td data-label="성격">음악·엔터테인먼트 미디어</td>
+            <td data-label="활용 방향">11월 1일 오후 5:45 인터뷰 <span class="priority">확정</span></td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/serbaserbikpop/" target="_blank">Serba Serbi Kpop ↗</a><div class="handle">@serbaserbikpop</div></td>
+            <td data-label="팔로워">330K</td>
+            <td data-label="성격">K-pop 뉴스·팬 미디어</td>
+            <td data-label="활용 방향">공지 확산, 팬 질문형 숏폼</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/dreamersradio/" target="_blank">Dreamers Radio ↗</a><div class="handle">@dreamersradio</div></td>
+            <td data-label="팔로워">192K</td>
+            <td data-label="성격">K-pop·K-drama 뉴스, 스트리밍 라디오·커뮤니티</td>
+            <td data-label="활용 방향">짧은 인터뷰</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/kopichuseyo/" target="_blank">Kopi Chuseyo ↗</a><div class="handle">@kopichuseyo</div></td>
+            <td data-label="팔로워">145K</td>
+            <td data-label="성격">K-pop 커뮤니티·이벤트·디지털 에이전시</td>
+            <td data-label="활용 방향">팬 대상 숏폼·인터뷰</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/ngekonser/" target="_blank">Ngekonser ↗</a><div class="handle">@ngekonser</div></td>
+            <td data-label="팔로워">125K</td>
+            <td data-label="성격">인도네시아 공연·티켓·콘서트 정보</td>
+            <td data-label="활용 방향">공연 홍보, 현장 릴스</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/todaystageid/" target="_blank">TodayStage ↗</a><div class="handle">@todaystageid</div></td>
+            <td data-label="팔로워">106K</td>
+            <td data-label="성격">음악·공연·K-entertainment 전문 매체</td>
+            <td data-label="활용 방향">현장 인터뷰·리캡</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/prediksikpop/" target="_blank">Prediksi K-pop ↗</a><div class="handle">@prediksikpop</div></td>
+            <td data-label="팔로워">114K</td>
+            <td data-label="성격">K-pop 예상·루머·바이럴 업데이트</td>
+            <td data-label="활용 방향">공연 정보 확산</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/kfeedsid/" target="_blank">Kfeeds ↗</a><div class="handle">@kfeedsid</div></td>
+            <td data-label="팔로워">97K</td>
+            <td data-label="성격">K-pop·K-drama·K-entertainment 데일리 뉴스</td>
+            <td data-label="활용 방향">발매·공연 정보 확산</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/terkinni/" target="_blank">Terkinni ↗</a><div class="handle">@terkinni</div></td>
+            <td data-label="팔로워">30.4K</td>
+            <td data-label="성격">한–인니 문화 및 K-entertainment 협업 미디어</td>
+            <td data-label="활용 방향">콜라보 서사·현장 콘텐츠</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/cosdot/" target="_blank">cosdot ↗</a><div class="handle">@cosdot · 계정 확인 필요</div></td>
+            <td data-label="팔로워">11.4K</td>
+            <td data-label="성격">소규모 문화·엔터테인먼트 계정으로 추정</td>
+            <td data-label="활용 방향">초대·현장 취재 중심</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/neonwaveid/" target="_blank">Neonwave ↗</a><div class="handle">@neonwaveid</div></td>
+            <td data-label="팔로워">1.1K</td>
+            <td data-label="성격">팝컬처 뉴스·스토리·오리지널 콘텐츠</td>
+            <td data-label="활용 방향">현장 콘텐츠·관계 구축</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>PA · Moon Sujin in JKT · 2026.10.26</footer>
+  </main>
+</body>
+</html>
