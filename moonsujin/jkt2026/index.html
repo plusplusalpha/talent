@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon Sujin in JKT</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #6f6f6f;
+      --line: #dcdcdc;
+      --soft: #f6f6f4;
+      --paper: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #ececea;
+      color: var(--ink);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.58;
+      letter-spacing: -0.012em;
+    }
+
+    main {
+      width: min(100% - 32px, 980px);
+      margin: 28px auto;
+      padding: 48px 52px 56px;
+      background: var(--paper);
+      border: 1px solid #ddd;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .05);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 74px;
+      height: auto;
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.18;
+      letter-spacing: -.035em;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .rule {
+      height: 1px;
+      margin: 30px 0;
+      background: var(--ink);
+    }
+
+    h2 {
+      margin: 38px 0 14px;
+      font-size: 17px;
+      line-height: 1.3;
+      letter-spacing: -.025em;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 13px;
+    }
+
+    p { margin: 0 0 10px; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 20px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .event-item {
+      min-height: 88px;
+      padding: 15px 14px 15px 0;
+    }
+
+    .event-item + .event-item {
+      padding-left: 14px;
+      border-left: 1px solid var(--line);
+    }
+
+    .event-item span {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .event-item strong {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .sales {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 24px;
+      align-items: end;
+      margin-top: 15px;
+      padding: 20px 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .sales-number {
+      font-size: 38px;
+      font-weight: 760;
+      line-height: 1;
+      letter-spacing: -.045em;
+    }
+
+    .sales-number small {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 550;
+      letter-spacing: -.02em;
+    }
+
+    .progress {
+      height: 6px;
+      margin-top: 13px;
+      overflow: hidden;
+      background: #dfdfdc;
+    }
+
+    .progress > div {
+      width: 98%;
+      height: 100%;
+      background: #5f6368;
+    }
+
+    .sales-copy {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .run-of-show {
+      margin-top: 18px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .run-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .run-head h2 {
+      margin: 0;
+      font-size: 13px;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    .supporting-dj {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .supporting-dj a { font-weight: 700; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 28px;
+      padding: 10px 0;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid #ededeb;
+      font-size: 11.5px;
+    }
+
+    .timeline-item:nth-last-child(-n+2) { border-bottom: 0; }
+
+    .timeline-item time {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      font-weight: 650;
+    }
+
+    .finance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 14px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .finance-item {
+      padding: 17px;
+      background: var(--paper);
+    }
+
+    .finance-item span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .finance-item strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .finance-item small {
+      display: block;
+      margin: 0 0 0 8px;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .md-counter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 9px;
+    }
+
+    .md-counter label {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .md-counter input {
+      width: 62px;
+      height: 27px;
+      padding: 0 7px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      appearance: textfield;
+    }
+
+    .md-counter input::-webkit-inner-spin-button,
+    .md-counter input::-webkit-outer-spin-button { appearance: none; margin: 0; }
+
+    .money {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted #8a8a8a;
+      cursor: help;
+    }
+
+    .money::after {
+      position: absolute;
+      z-index: 10;
+      left: 50%;
+      bottom: calc(100% + 8px);
+      padding: 6px 8px;
+      border-radius: 3px;
+      background: #111;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+      content: attr(data-krw);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 4px);
+      transition: opacity .15s ease, transform .15s ease;
+    }
+
+    .money:hover::after,
+    .money:focus::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .summary-item {
+      padding: 18px 16px 18px 0;
+    }
+
+    .summary-item + .summary-item {
+      padding-left: 16px;
+      border-left: 1px solid var(--line);
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 21px;
+      line-height: 1;
+    }
+
+    .summary-item span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .condition-card {
+      padding: 14px 16px;
+      background: var(--soft);
+      border: 1px solid #e6e6e3;
+    }
+
+    .condition-card h3 {
+      margin-bottom: 7px;
+      font-size: 12px;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .condition-list {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 4px 10px;
+      margin: 0;
+      font-size: 11.5px;
+    }
+
+    .condition-list dt {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .condition-list dd { margin: 0; }
+
+    .artist-card {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      background: #fafafa;
+    }
+
+    .artist-card + .artist-card { margin-top: 10px; }
+
+    .proposal-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 7px;
+      padding: 5px 9px;
+      border: 1px solid #cfcfcb;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-size: 10.5px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .proposal-button:hover { background: var(--soft); }
+
+    .proposal-overlay {
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+      background: rgba(0, 0, 0, .28);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease;
+    }
+
+    .proposal-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .proposal-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(88vw, 420px);
+      height: 100%;
+      padding: 26px 24px;
+      background: #fff;
+      box-shadow: -14px 0 36px rgba(0, 0, 0, .12);
+      transform: translateX(100%);
+      transition: transform .25s ease;
+      overflow-y: auto;
+    }
+
+    .proposal-overlay.is-open .proposal-panel { transform: translateX(0); }
+
+    .proposal-close {
+      float: right;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: #fff;
+      font-size: 19px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .proposal-panel .eyebrow { margin-top: 44px; }
+    .proposal-panel h2 { margin: 0 0 8px; font-size: 20px; }
+    .proposal-language {
+      margin-bottom: 20px;
+      padding: 9px 11px;
+      border-left: 2px solid var(--ink);
+      background: var(--soft);
+      color: #333;
+      font-size: 11.5px;
+      font-weight: 650;
+    }
+    .proposal-content { color: #444; font-size: 12.5px; }
+    .proposal-content h3 {
+      margin: 22px 0 8px;
+      color: var(--ink);
+      font-size: 12px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .proposal-content h3:first-child { margin-top: 0; }
+    .proposal-content p { margin: 0 0 10px; }
+    .proposal-content ol,
+    .proposal-content ul { margin: 8px 0 14px; padding-left: 20px; }
+    .proposal-content li + li { margin-top: 8px; }
+    .proposal-content a { overflow-wrap: anywhere; }
+    .proposal-meta {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 4px 10px;
+      margin: 0 0 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 11.5px;
+    }
+    .proposal-meta dt { color: var(--muted); font-weight: 700; }
+    .proposal-meta dd { margin: 0; }
+
+    .artist-card h3 {
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+
+    .artist-card p {
+      margin: 0;
+      color: #444;
+      font-size: 12px;
+    }
+
+    .artist-details {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 4px 10px;
+      margin: 0;
+      font-size: 11.5px;
+    }
+
+    .artist-details dt {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .artist-details dd { margin: 0; }
+
+    ul {
+      margin: 7px 0 0;
+      padding-left: 18px;
+    }
+
+    li + li { margin-top: 3px; }
+
+    .note {
+      margin-top: 12px;
+      padding-left: 12px;
+      border-left: 2px solid var(--ink);
+      color: #454545;
+      font-size: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 12.5px;
+    }
+
+    th {
+      padding: 9px 9px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 12px 9px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th:first-child,
+    td:first-child { padding-left: 0; }
+
+    th:last-child,
+    td:last-child { padding-right: 0; }
+
+    a {
+      color: var(--ink);
+      font-weight: 650;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .handle,
+    .subtle {
+      color: var(--muted);
+      font-size: 11.5px;
+    }
+
+    .priority {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      min-width: 38px;
+      min-height: 20px;
+      padding: 2px 8px;
+      border: 1px solid #b8dfc5;
+      border-radius: 999px;
+      background: #eaf7ee;
+      color: #287044;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .02em;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .message {
+      padding: 20px 22px;
+      background: var(--soft);
+      border: 1px solid #dededb;
+      white-space: pre-line;
+    }
+
+    .recommendation {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .recommendation:first-of-type { border-top: 1px solid var(--ink); }
+    .recommendation:last-of-type { border-bottom-color: var(--ink); }
+    .recommendation strong { font-size: 12px; }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    @media (max-width: 720px) {
+      body { background: #fff; }
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 28px 20px 40px;
+        border: 0;
+        box-shadow: none;
+      }
+      h1 { font-size: 23px; }
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .summary-item + .summary-item {
+        padding-left: 10px;
+        border-left: 1px solid var(--line);
+      }
+      .summary-item:nth-child(3) {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+      .summary-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .summary-item { padding: 12px 8px 12px 0; }
+      .summary-item strong { font-size: 17px; }
+      .summary-item span { font-size: 10px; }
+      .conditions-grid { grid-template-columns: 1fr; }
+      .condition-card { padding: 13px 14px; }
+      .artist-card { grid-template-columns: 1fr; gap: 12px; padding: 14px; }
+      .event-grid { grid-template-columns: 1fr 1fr; }
+      .event-item:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+      .event-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .sales { grid-template-columns: 1fr; gap: 12px; }
+      .sales-copy { text-align: left; }
+      .run-head { align-items: flex-start; flex-direction: column; gap: 2px; }
+      .timeline { grid-template-columns: 1fr; }
+      .timeline-item:nth-last-child(-n+2) { border-bottom: 1px solid #ededeb; }
+      .timeline-item:last-child { border-bottom: 0; }
+      .finance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .finance-item { padding: 13px 11px; }
+      .finance-item strong { font-size: 14px; }
+      .finance-item span { font-size: 9px; }
+      .finance-item small { font-size: 9.5px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { display: none; }
+      tr {
+        margin-bottom: 10px;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: #fafafa;
+      }
+      td {
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 8px;
+        padding: 4px 0;
+        border: 0;
+      }
+      td::before {
+        display: inline;
+        margin: 0;
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        content: attr(data-label);
+      }
+      td:first-child {
+        display: block;
+        padding: 0 0 8px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 5px;
+      }
+      td:first-child::before { display: none; }
+      td:first-child a { font-size: 14px; }
+      .recommendation { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        border: 0;
+        box-shadow: none;
+      }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img class="brand-logo" src="data:image/png;base64,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" alt="PA" />
+      <p class="eyebrow">Showcase Overview</p>
+      <h1>Moon Sujin in JKT</h1>
+      <div class="event-grid" aria-label="Showcase information">
+        <div class="event-item"><span>Artist</span><strong>MOON SUJIN<br />× GANGGA</strong></div>
+        <div class="event-item"><span>Date</span><strong>2026년 11월 1일<br />일요일</strong></div>
+        <div class="event-item"><span>Time</span><strong>오후 6:30 입장<br />오후 7:00 공연</strong></div>
+        <div class="event-item"><span>Venue</span><strong>Krapela<br />Jakarta</strong></div>
+      </div>
+      <section class="run-of-show" aria-label="Run of show">
+        <div class="run-head">
+          <h2>Run of Show</h2>
+          <div class="supporting-dj">After-party DJ · Rhode → <a href="https://www.instagram.com/sandweej/" target="_blank">Weejay ↗</a></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><time>09:30</time><span>GANGGA 콜타임 / 크루 로드인·장비 설치</span></div>
+          <div class="timeline-item"><time>10:30</time><span>문수진 콜타임</span></div>
+          <div class="timeline-item"><time>11:00</time><span>점심 식사</span></div>
+          <div class="timeline-item"><time>11:30–13:00</time><span>GANGGA 사운드체크</span></div>
+          <div class="timeline-item"><time>13:00–14:00</time><span>문수진 사운드체크</span></div>
+          <div class="timeline-item"><time>14:00–14:30</time><span>합동 리허설</span></div>
+          <div class="timeline-item"><time>14:30–17:00</time><span>휴식</span></div>
+          <div class="timeline-item"><time>16:50</time><span>문수진 저녁 콜타임 / 인터뷰 준비</span></div>
+          <div class="timeline-item"><time>17:00–17:10</time><span>Daniel Hermansyah · 스트리트 인터뷰</span></div>
+          <div class="timeline-item"><time>17:10–17:20</time><span>Kopi Chuseyo · 3 Seconds Quick Answer Challenge</span></div>
+          <div class="timeline-item"><time>17:20–17:30</time><span>TodayStage · 인터뷰</span></div>
+          <div class="timeline-item"><time>17:30–17:40</time><span>Dinar Eonni · 숏폼 질문 콘텐츠</span></div>
+          <div class="timeline-item"><time>17:45</time><span>Creative Disc · 인터뷰 및 숏폼 콘텐츠</span></div>
+          <div class="timeline-item"><time>18:00</time><span>GANGGA 저녁 콜타임</span></div>
+          <div class="timeline-item"><time>18:30</time><span>입장 / 게스트 체크인</span></div>
+          <div class="timeline-item"><time>19:00–19:05</time><span>오프닝</span></div>
+          <div class="timeline-item"><time>19:05–19:30</time><span>GANGGA 솔로 세트</span></div>
+          <div class="timeline-item"><time>19:30–19:40</time><span>GANGGA × Moon Sujin — Blue Jeans &amp; patience</span></div>
+          <div class="timeline-item"><time>19:40–20:25</time><span>문수진 솔로 세트</span></div>
+          <div class="timeline-item"><time>20:25–20:30</time><span>앵콜 제안 · patience — GANGGA × Moon Sujin</span></div>
+          <div class="timeline-item"><time>20:30–21:15</time><span>애프터파티 DJ · Rhode (45분)</span></div>
+          <div class="timeline-item"><time>21:15–22:00</time><span>애프터파티 DJ · Weejay (45분)</span></div>
+          <div class="timeline-item"><time>22:00</time><span>행사 종료</span></div>
+        </div>
+      </section>
+    </header>
+
+    <section>
+      <h2>Ticket Sales</h2>
+      <div class="sales">
+        <div>
+          <div class="sales-number">196 <small>/ 200매</small></div>
+          <div class="progress" aria-label="98% sold"><div></div></div>
+        </div>
+        <div class="sales-copy"><strong style="color:#111">98% 판매</strong><br />잔여 4매<br />10월 31일 기준</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Costs &amp; Profit</h2>
+      <div class="finance-grid">
+        <div class="finance-item"><span>티켓 가격</span><strong><span class="money" tabindex="0" data-krw="약 ₩10,950">IDR 150,000</span></strong><small>1매 기준</small></div>
+        <div class="finance-item"><span>베뉴 대관료</span><strong><span class="money" tabindex="0" data-krw="약 ₩1,095,000">IDR 15,000,000</span></strong><small>Krapela 대관</small></div>
+        <div class="finance-item"><span>현재 티켓 매출</span><strong><span class="money" tabindex="0" data-krw="약 ₩2,146,200">IDR 29,400,000</span></strong><small>196매 × IDR 150,000</small></div>
+        <div class="finance-item"><span>티켓 이익</span><strong><span class="money" tabindex="0" data-krw="약 ₩1,051,200">IDR 14,400,000</span></strong><small>티켓 매출 − 대관료</small></div>
+        <div class="finance-item">
+          <span>키링 MD 판매</span>
+          <strong><span class="money" id="mdRevenue" tabindex="0" data-krw="약 ₩0">IDR 0</span></strong>
+          <small>개당 IDR 200,000</small>
+          <div class="md-counter" aria-label="키링 판매 수량">
+            <label for="mdCount">판매 수량</label>
+            <input id="mdCount" type="number" min="0" step="1" value="0" inputmode="numeric" aria-label="키링 판매 수량" />
+          </div>
+        </div>
+        <div class="finance-item"><span>총 이익</span><strong><span class="money" id="totalProfit" tabindex="0" data-krw="약 ₩1,051,200">IDR 14,400,000</span></strong><small>티켓 이익 + 키링 매출</small></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Media &amp; Creators</h2>
+      <section class="summary-grid" aria-label="Summary">
+        <div class="summary-item"><strong>3</strong><span>인플루언서</span></div>
+        <div class="summary-item"><strong>11</strong><span>미디어 아울렛</span></div>
+        <div class="summary-item"><strong>4</strong><span>아티스트</span></div>
+        <div class="summary-item"><strong>34</strong><span>총 초대 인원</span></div>
+      </section>
+      <div class="conditions-grid">
+        <article class="condition-card">
+          <h3>Influencer</h3>
+          <dl class="condition-list">
+            <dt>사전</dt><dd>메인 포스터 스토리 1회</dd>
+            <dt>공연 당일</dt><dd>현장 스토리 2회</dd>
+            <dt>초대</dt><dd>각 2인</dd>
+            <dt>콘텐츠</dt><dd>문수진과 짧은 협업 콘텐츠</dd>
+          </dl>
+        </article>
+        <article class="condition-card">
+          <h3>Media</h3>
+          <dl class="condition-list">
+            <dt>사전</dt><dd>메인 포스터 피드·스토리 각 1회</dd>
+            <dt>공연 당일</dt><dd>현장 스토리 2회·릴스 1회</dd>
+            <dt>초대</dt><dd>각 2인</dd>
+            <dt>콘텐츠</dt><dd>상위 5곳 틱톡 또는 10분 이내 인터뷰</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Artist Meetings</h2>
+      <article class="artist-card">
+        <div>
+          <h3><a href="https://www.instagram.com/whereisryo/" target="_blank">RYO ↗</a></h3>
+          <p>@whereisryo · AntiNRML</p>
+        </div>
+        <dl class="artist-details">
+          <dt>Profile</dt><dd>자카르타 기반 뮤지션 · Instagram 21.8K</dd>
+          <dt>Request</dt><dd>공연 참석 및 문수진과의 만남 희망</dd>
+          <dt>Purpose</dt><dd>상호 소개 및 향후 음악 협업 가능성 논의</dd>
+          <dt>Status</dt><dd>만남 일정 조율 필요</dd>
+        </dl>
+      </article>
+      <article class="artist-card">
+        <div>
+          <h3><a href="https://www.instagram.com/jkt48.fritzy.r/" target="_blank">Fritzy Rosmerian ↗</a></h3>
+          <p>@jkt48.fritzy.r · JKT48</p>
+        </div>
+        <dl class="artist-details">
+          <dt>Profile</dt><dd>JKT48 멤버 · 본인 외 4인 참석 예정</dd>
+          <dt>Purpose</dt><dd>문수진과 인사 및 밋앤그릿</dd>
+          <dt>Potential</dt><dd>챌린지 또는 간단한 콘텐츠 가능성 논의</dd>
+          <dt>Status</dt><dd>아티스트 미팅 예정</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section>
+      <h2>Influencers</h2>
+      <table>
+        <thead>
+          <tr><th style="width:23%">계정</th><th style="width:18%">팔로워 / 초대</th><th style="width:31%">설명</th><th style="width:28%">콘텐츠 방향</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="계정"><a href="https://www.instagram.com/danielhermansyahh/" target="_blank">Daniel Hermansyah ↗</a><div class="handle">@danielhermansyahh</div></td>
+            <td data-label="팔로워">IG 238K<br />TikTok 211K</td>
+            <td data-label="설명">Kopi Chuseyo 공동창업자·K-pop 크리에이터·커뮤니티 운영자</td>
+            <td data-label="콘텐츠 방향">17:00 스트리트 인터뷰 · 10분<br /><button class="proposal-button" type="button" data-proposal="Daniel Hermansyah" data-template="proposalDaniel">제안 보기</button></td>
+          </tr>
+          <tr>
+            <td data-label="계정"><a href="https://www.instagram.com/dinareonni/" target="_blank">Dinar Eonni ↗</a><div class="handle">@dinareonni</div></td>
+            <td data-label="팔로워">IG 67K<br />TikTok 600K</td>
+            <td data-label="설명">한–인니 통번역가·한국어 강사·문화 콘텐츠 크리에이터</td>
+            <td data-label="콘텐츠 방향">17:30–17:40 간단한 질문형 숏폼<br /><button class="proposal-button" type="button" data-proposal="Dinar Eonni" data-template="proposalDinar">제안 보기</button></td>
+          </tr>
+          <tr>
+            <td data-label="계정"><a href="https://www.instagram.com/arnoldputra/" target="_blank">Arnold Putra ↗</a><div class="handle">@arnoldputra</div></td>
+            <td data-label="초대">본인 · 1인</td>
+            <td data-label="설명">패션 디자이너·크리에이티브</td>
+            <td data-label="콘텐츠 방향">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media</h2>
+      <table>
+        <thead>
+          <tr><th style="width:25%">매체</th><th style="width:14%">팔로워</th><th style="width:34%">설명</th><th style="width:27%">활용 방향</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/creativedisc_/" target="_blank">Creative Disc ↗</a><div class="handle">@creativedisc_</div></td>
+            <td data-label="팔로워">15K</td>
+            <td data-label="설명">음악·엔터테인먼트 미디어</td>
+            <td data-label="활용 방향">17:45 인터뷰·숏폼 <span class="priority">확정</span><br /><button class="proposal-button" type="button" data-proposal="Creative Disc" data-template="proposalCreativeDisc">제안 보기</button></td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/serbaserbikpop/" target="_blank">Serba Serbi Kpop ↗</a><div class="handle">@serbaserbikpop</div></td>
+            <td data-label="팔로워">330K</td>
+            <td data-label="설명">K-pop 뉴스·팬 미디어</td>
+            <td data-label="활용 방향">공지 확산, 팬 질문형 숏폼</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/dreamersradio/" target="_blank">Dreamers Radio ↗</a><div class="handle">@dreamersradio</div></td>
+            <td data-label="팔로워">192K</td>
+            <td data-label="설명">K-pop·K-drama 뉴스, 스트리밍 라디오·커뮤니티</td>
+            <td data-label="활용 방향">짧은 인터뷰</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/kopichuseyo/" target="_blank">Kopi Chuseyo ↗</a><div class="handle">@kopichuseyo</div></td>
+            <td data-label="팔로워">145K</td>
+            <td data-label="설명">K-pop 커뮤니티·이벤트·디지털 에이전시</td>
+            <td data-label="활용 방향">17:10 퀵 앤서·촬영 · 10분<br /><button class="proposal-button" type="button" data-proposal="Kopi Chuseyo" data-template="proposalKopi">제안 보기</button></td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/ngekonser/" target="_blank">Ngekonser ↗</a><div class="handle">@ngekonser</div></td>
+            <td data-label="팔로워">125K</td>
+            <td data-label="설명">인도네시아 공연·티켓·콘서트 정보</td>
+            <td data-label="활용 방향">공연 홍보, 현장 릴스</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/todaystageid/" target="_blank">TodayStage ↗</a><div class="handle">@todaystageid</div></td>
+            <td data-label="팔로워">106K</td>
+            <td data-label="설명">음악·공연·K-entertainment 전문 매체</td>
+            <td data-label="활용 방향">17:20 인터뷰 · 최대 10분<br /><button class="proposal-button" type="button" data-proposal="TodayStage" data-template="proposalTodayStage">제안 보기</button></td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/prediksikpop/" target="_blank">Prediksi K-pop ↗</a><div class="handle">@prediksikpop</div></td>
+            <td data-label="팔로워">114K</td>
+            <td data-label="설명">K-pop 예상·루머·바이럴 업데이트</td>
+            <td data-label="활용 방향">공연 정보 확산</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/kfeedsid/" target="_blank">Kfeeds ↗</a><div class="handle">@kfeedsid</div></td>
+            <td data-label="팔로워">97K</td>
+            <td data-label="설명">K-pop·K-drama·K-entertainment 데일리 뉴스</td>
+            <td data-label="활용 방향">발매·공연 정보 확산</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/terkinni/" target="_blank">Terkinni ↗</a><div class="handle">@terkinni</div></td>
+            <td data-label="팔로워">30.4K</td>
+            <td data-label="설명">한–인니 문화 및 K-entertainment 협업 미디어</td>
+            <td data-label="활용 방향">콜라보 서사·현장 콘텐츠</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/cosdotmedia/" target="_blank">Cosdot Media ↗</a><div class="handle">@cosdotmedia</div></td>
+            <td data-label="팔로워">11.4K</td>
+            <td data-label="설명">팝컬처·엔터테인먼트 미디어</td>
+            <td data-label="활용 방향">초대·현장 취재 중심</td>
+          </tr>
+          <tr>
+            <td data-label="매체"><a href="https://www.instagram.com/neonwaveid/" target="_blank">Neonwave ↗</a><div class="handle">@neonwaveid</div></td>
+            <td data-label="팔로워">1.1K</td>
+            <td data-label="설명">팝컬처 뉴스·스토리·오리지널 콘텐츠</td>
+            <td data-label="활용 방향">현장 콘텐츠·관계 구축</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>PA · Moon Sujin in JKT · 2026.10.31</footer>
+  </main>
+  <template id="proposalDaniel">
+    <dl class="proposal-meta"><dt>Time</dt><dd>17:00–17:10</dd><dt>Format</dt><dd>스트리트 인터뷰</dd></dl>
+    <h3>Content</h3>
+    <p>문수진과 진행하는 짧은 스트리트 인터뷰. 예상 소요 시간은 10분입니다.</p>
+    <h3>References</h3>
+    <ol>
+      <li><a href="https://vt.tiktok.com/ZSgWGF7yW/" target="_blank">TikTok 레퍼런스 ↗</a></li>
+      <li><a href="https://www.instagram.com/reel/DeMEY7Uyw_5/?srtk=MTgxOHBnYjZ4ODM3Zg==" target="_blank">Instagram Reel 레퍼런스 ↗</a></li>
+    </ol>
+  </template>
+
+  <template id="proposalCreativeDisc">
+    <dl class="proposal-meta"><dt>Time</dt><dd>17:45</dd><dt>Format</dt><dd>오프카메라 인터뷰 + 숏폼 영상</dd></dl>
+    <h3>Part 1 · Regular Interview</h3>
+    <p>일반 인터뷰는 오프카메라로 진행합니다.</p>
+    <h3>A. Her story and sound</h3>
+    <ol>
+      <li>You started your career in 2018, and you first performed as “Moon” before using the name “Moon Sujin.” What was your thinking when you made that change? How did it affect your work as an artist?</li>
+      <li>In an earlier interview, you said your music is hard to put in one box. How would you describe your sound to someone who has never heard it?</li>
+    </ol>
+    <h3>B. Her Korean roots</h3>
+    <ol start="3">
+      <li>You were born in Busan and now work in Seoul. How are the two cities different for you? How has each one shaped your music?</li>
+      <li>“Never Let Me Go” was the first song you released in both Korean and English. Was your writing process different in each language? What is the hardest part of writing in two languages?</li>
+    </ol>
+    <h3>C. K-drama OSTs</h3>
+    <ol start="5">
+      <li>Your latest release is “Stay Awake,” a song for the drama Doctor X. It matches the series’ mood well. How did you get involved in this project? Did the music team reach out to you first?</li>
+      <li>You have also sung on other K-drama OSTs, such as Business Proposal (사내맞선) and A Bona Fide Killer (유부녀 킬러). When you work on an OST, how much does the script help you? How is this process different from your usual way of working?</li>
+    </ol>
+    <h3>D. Working with Gangga</h3>
+    <ol start="7">
+      <li>“patience” is your collaboration with Indonesian singer Gangga. Is this your first time working with an Indonesian artist? Can you share the behind-the-scenes story? Who reached out first, and how did you make the song together?</li>
+      <li>You have worked with many big names in Korea, like Zion.T, Wonstein, PENOMECO and EXO-SC. Who is on your wish list for your next collaboration?</li>
+    </ol>
+    <h3>E. The big picture</h3>
+    <ol start="9">
+      <li>K-pop is big all over the world now, including in Indonesia. How does that look from where you stand as a solo singer?</li>
+      <li>What is the biggest challenge you face right now as a musician?</li>
+    </ol>
+    <h3>Part 2 · Short-form Video</h3>
+    <p><strong>3 on repeat songs on Moon Sujin’s playlist</strong></p>
+  </template>
+
+  <template id="proposalKopi">
+    <dl class="proposal-meta"><dt>Time</dt><dd>17:10–17:20</dd><dt>Format</dt><dd>3 Seconds Quick Answer Challenge + 사진·기사</dd></dl>
+    <h3>Opening</h3>
+    <p>안녕하세요, 꼬삐추세요! 저는 문수진입니다!<br />Annyeonghaseyo, Kopi Chuseyo! I’m Moon Sujin!</p>
+    <h3>Questions</h3>
+    <ol>
+      <li>가장 좋아하는 한국 드라마는? / Favorite Korean Drama?</li>
+      <li>가장 자주 사용하는 이모지는? / Favorite Emoji?</li>
+      <li>가장 좋아하는 한국 노래는? / Favorite Korean Song?</li>
+      <li>가장 좋아하는 인도네시아어 단어는? / Favorite Indonesian Word?</li>
+      <li>자카르타에서 가장 좋아하는 음식은? / Favorite Food in Jakarta?</li>
+    </ol>
+    <h3>Closing</h3>
+    <p>감사합니다! 꼬삐추세요, 사랑해요!<br />Thank you! Kopi Chuseyo, I love you!</p>
+    <h3>Additional Coverage</h3>
+    <p>Nadya가 기사 커버 사진을 위해 문수진을 직접 촬영하며, 기사는 당일 콘서트를 다룰 예정입니다.</p>
+    <h3>References</h3>
+    <ol>
+      <li><a href="https://www.instagram.com/reel/DcWZmu8tyo-/?obrf=b3lhMnozMzNuNGo0" target="_blank">Quick Answer 예시 ↗</a></li>
+      <li><a href="https://www.instagram.com/p/De41CF7hISy/?exln=MXJ2azhuMXJ0M29zbg==" target="_blank">사진·기사 예시 ↗</a></li>
+      <li><a href="https://vt.tiktok.com/ZSggsC9wQ/" target="_blank">Syarini Trend 예시 ↗</a></li>
+      <li><a href="https://vt.tiktok.com/ZSggGVxv2/" target="_blank">Fit Check 예시 ↗</a></li>
+      <li><a href="https://vt.tiktok.com/ZSggGWtwh/" target="_blank">TikTok 추가 예시 ↗</a></li>
+    </ol>
+  </template>
+
+  <template id="proposalTodayStage">
+    <dl class="proposal-meta"><dt>Time</dt><dd>17:20–17:30</dd><dt>Format</dt><dd>인터뷰 · 최대 10분</dd></dl>
+    <h3>Interview Flow</h3>
+    <ol>
+      <li>TodayStage 오프닝 및 문수진 자기소개</li>
+      <li>인도네시아, 특히 자카르타에 오게 된 소감은 어떠신가요?</li>
+      <li>인도네시아 팬분들께 전하고 싶은 메시지가 있으신가요?</li>
+      <li>최근 발매한 신곡 소개 및 홍보 후 클로징</li>
+    </ol>
+  </template>
+
+  <template id="proposalDinar">
+    <dl class="proposal-meta"><dt>Time</dt><dd>17:30–17:40</dd><dt>Format</dt><dd>간단한 질문형 숏폼 콘텐츠</dd></dl>
+    <h3>Content</h3>
+    <p>짧고 가볍게 답하는 질문형 영상 콘텐츠입니다. 세부 질문은 현장에서 간단히 확인합니다.</p>
+    <h3>Reference</h3>
+    <p><a href="https://www.instagram.com/reel/DeMEY7Uyw_5/?srtk=MTgxOHBnYjZ4ODM3Zg%3D%3D" target="_blank">Instagram Reel 레퍼런스 ↗</a></p>
+  </template>
+
+  <div class="proposal-overlay" id="proposalOverlay" aria-hidden="true">
+    <aside class="proposal-panel" role="dialog" aria-modal="true" aria-labelledby="proposalTitle">
+      <button class="proposal-close" type="button" aria-label="닫기">×</button>
+      <p class="eyebrow">Content Proposal</p>
+      <h2 id="proposalTitle">제안 내용</h2>
+      <div class="proposal-language">문수진은 한국어로 답변해도 됩니다.</div>
+      <div class="proposal-content" id="proposalContent">제안 내용 업데이트 예정</div>
+    </aside>
+  </div>
+  <script>
+    const mdUnitPrice = 200000;
+    const ticketProfit = 14400000;
+    const idrToKrw = 0.073;
+    const mdCount = document.getElementById('mdCount');
+    const mdRevenue = document.getElementById('mdRevenue');
+    const totalProfit = document.getElementById('totalProfit');
+    const formatIdr = (value) => `IDR ${Math.round(value).toLocaleString('en-US')}`;
+    const formatKrw = (value) => `약 ₩${Math.round(value * idrToKrw).toLocaleString('ko-KR')}`;
+    const updateMdProfit = () => {
+      const count = Math.max(0, Math.floor(Number(mdCount.value) || 0));
+      mdCount.value = count;
+      const revenue = count * mdUnitPrice;
+      const profit = ticketProfit + revenue;
+      mdRevenue.textContent = formatIdr(revenue);
+      mdRevenue.dataset.krw = formatKrw(revenue);
+      totalProfit.textContent = formatIdr(profit);
+      totalProfit.dataset.krw = formatKrw(profit);
+    };
+
+    mdCount.addEventListener('input', updateMdProfit);
+
+    const proposalOverlay = document.getElementById('proposalOverlay');
+    const proposalTitle = document.getElementById('proposalTitle');
+    const proposalContent = document.getElementById('proposalContent');
+    const closeProposal = () => {
+      proposalOverlay.classList.remove('is-open');
+      proposalOverlay.setAttribute('aria-hidden', 'true');
+    };
+
+    document.querySelectorAll('.proposal-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        proposalTitle.textContent = button.dataset.proposal;
+        const template = document.getElementById(button.dataset.template);
+        proposalContent.innerHTML = template ? template.innerHTML : '제안 내용 업데이트 예정';
+        proposalOverlay.classList.add('is-open');
+        proposalOverlay.setAttribute('aria-hidden', 'false');
+        proposalOverlay.querySelector('.proposal-close').focus();
+      });
+    });
+
+    proposalOverlay.querySelector('.proposal-close').addEventListener('click', closeProposal);
+    proposalOverlay.addEventListener('click', (event) => {
+      if (event.target === proposalOverlay) closeProposal();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeProposal();
+    });
+  </script>
+</body>
+</html>
